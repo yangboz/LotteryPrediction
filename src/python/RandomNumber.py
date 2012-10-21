@@ -6,6 +6,8 @@ import pylab as pylab
 redBalls=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32]
 blueBalls=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
 #test code
+#import itertools
+#print(list(itertools.permutations(redBalls,6)))
 #print( random.random() )
 for x in range(0,6):#NUM_OF_RED=6
     choice_num_red = random.choice( redBalls )
