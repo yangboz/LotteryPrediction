@@ -14,4 +14,14 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =====================================================================*/
-Ref:http://www.scriptol.com/programming/list-algorithms.php
+# Refs:
+
+http://www.scriptol.com/programming/list-algorithms.php
+
+http://www.ipedr.com/vol25/54-ICEME2011-N20032.pdf
+
+http://www.brightpointinc.com/flexdemos/chartslicer/chartslicersample.html
+
+# Screen shots
+
+![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/src/assets/screenshots/lp.jpg)
