@@ -20,6 +20,8 @@ http://www.scriptol.com/programming/list-algorithms.php
 
 http://www.ipedr.com/vol25/54-ICEME2011-N20032.pdf
 
+http://www.brightpointinc.com/flexdemos/chartslicer/chartslicersample.html
+
 # Screen shots
 
 ![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/src/assets/screenshots/lp.jpg)
