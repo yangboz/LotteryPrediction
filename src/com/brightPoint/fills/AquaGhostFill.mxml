@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearGradientFill xmlns:mx="http://www.adobe.com/2006/mxml" xmlns="http://www.degrafa.com/2007" angle="225">
+<mx:Script>
+	<![CDATA[
+		[Bindable]
+		public var colorTheme:Number=0xFFFFFF;
+	]]>
+</mx:Script>
+	<gradientStops>
+		<GradientStop color="{colorTheme}" alpha=".8" ratio="0"/>
+		<GradientStop color="{colorTheme}" alpha=".3" ratio="1"/>
+	</gradientStops>
+</LinearGradientFill>

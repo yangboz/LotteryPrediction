@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+Copyright (c) 2008, Thomas W. Gonzalez
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+www.brightpointinc.com
+
+*/
+-->
+<GraphicBorderSkin xmlns:mx="http://www.adobe.com/2006/mxml" 
+				   xmlns:flash.filters='flash.filters.*'
+                   xmlns="http://www.degrafa.com/2007" 
+                   xmlns:geometry="com.degrafa.geometry.*" 
+                   xmlns:degrafa="com.degrafa.*" 
+                   xmlns:repeaters="com.degrafa.geometry.repeaters.*">
+                   
+                   <mx:Script>
+                   	<![CDATA[
+                   		import flexlib.controls.HSlider;
+                   		import mx.controls.sliderClasses.Slider;
+						
+						
+						
+						override protected function updateDisplayList(unscaledWidth:Number, unscaledHeight:Number):void { var t:HSlider
+							if (parent  && parent.parent is HSlider) {
+								count=parent.parent["maximum"];
+								if (isNaN(count)) count=0;
+							}
+							w=this.width-2;
+							h=this.height;
+							this.graphics.clear();
+							myComp.draw(this.graphics,null);
+
+						}
+						
+						[Bindable]
+						private var count:Number=0;
+						
+						[Bindable]
+						private var w:Number;
+						
+						[Bindable]
+						private var h:Number;
+                   	]]>
+                   </mx:Script>
+                   
+                  <strokes>
+                  	<SolidStroke id="thumbLightStroke" weight="1" color="0xCCCCCC" alpha=".7"/>
+                  	<SolidStroke id="thumbStroke" weight="1" color="0x555555" alpha=".5"/>
+                  	<SolidStroke color="0" alpha=".3" id="darkStroke"/>
+                  	<SolidStroke color="0xFFFFFF" alpha=".2" id="lightStroke" weight="2"/>
+                  	<LinearGradientStroke id="sliderStroke" weight="1" angle="90">
+                  		<GradientStop color="0xBBBBBB" ratio="0"/>
+                  		<GradientStop color="0xEEEEEE" ratio="1"/>
+                  	</LinearGradientStroke>
+                  </strokes>
+				  <fills>
+					<SolidFill color="0x333333" id="backgroundFill" alpha="1"/>
+					<LinearGradientFill id="highlightFill" angle="90">
+				  		<GradientStop color="0xFFFFFF" ratio="0" alpha=".3"/>
+				  		<GradientStop color="0xFFFFFF" ratio=".4" alpha=".6"/>
+				  		<GradientStop color="0xFFFFFF" ratio=".4" alpha=".4"/>
+				  		<GradientStop color="0xFFFFFF" ratio="1" alpha=".3"/>
+						<!--GradientStop color="0xDDDDDD" ratio=".4" alpha=".5"/>
+						<GradientStop color="0xCCCCCC" ratio="1" alpha=".5"/-->
+					</LinearGradientFill>
+					<SolidFill alpha="1" id="emptyFill"/>
+				  </fills>
+				  
+				  <geometry>
+				  	
+						<degrafa:GeometryComposition id="myComp">
+							<RegularRectangle y="-6" width="{w}" height="10"  fill="{highlightFill}" stroke="{sliderStroke}"/>
+						
+							<Line y="-4" y1="2" x="{w/2-3}" x1="{w/2-3}" stroke="{thumbLightStroke}"/>
+							<Line y="-4" y1="2" x="{w/2}" x1="{w/2}" stroke="{thumbLightStroke}"/>
+							<Line y="-4" y1="2" x="{w/2+3}" x1="{w/2+3}" stroke="{thumbLightStroke}"/>
+							
+							<Line y="-4" y1="2" x="{w/2-2}" x1="{w/2-2}" stroke="{thumbStroke}"/>
+							<Line y="-4" y1="2" x="{w/2+1}" x1="{w/2+1}" stroke="{thumbStroke}"/>
+							<Line y="-4" y1="2" x="{w/2+4}" x1="{w/2+4}" stroke="{thumbStroke}"/>
+
+						</degrafa:GeometryComposition>
+						
+				  	
+				  </geometry>
+</GraphicBorderSkin>

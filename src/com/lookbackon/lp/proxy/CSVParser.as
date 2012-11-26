@@ -26,9 +26,6 @@ package com.lookbackon.lp.proxy
 	
 	import flash.events.Event;
 	import flash.net.URLRequest;
-	
-	import mx.core.Application;
-	import mx.core.FlexGlobals;
 
 	//--------------------------------------------------------------------------
 	//
@@ -164,8 +161,9 @@ package com.lookbackon.lp.proxy
 			}
 			//update model
 			model.lotteryData = new XMLList(xml);
-			//update view
-			FlexGlobals.topLevelApplication.lineChart.dataProvider = model.lotteryData[0].quote;
+			model.lotteryQuoteData = model.lotteryData[0].quote;
+			//update view(illigal operation based on MVC design pattern)
+//			FlexGlobals.topLevelApplication.lineChart.dataProvider = model.lotteryData[0].quote;
 		}
 		//
 		private function indexToDate(index:String):String

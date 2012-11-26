@@ -68,6 +68,8 @@ package com.lookbackon.lp.model
 							</quotes>
 						)
 			);
+		//for updating view
+		public var lotteryQuoteData:XMLList;
 		//----------------------------------
 		//  CONSTANTS
 		//----------------------------------
@@ -77,7 +79,15 @@ package com.lookbackon.lp.model
 		//  Public properties
 		//
 		//-------------------------------------------------------------------------- 
-		
+		//For chart data slicer
+//		public var quoteDataSlicer:Array=[{month:'june', sales:10, profit:5, cost:2}, {month:'july', sales:30, profit:10, cost:5}, {month:'aug', sales:20, profit:15, cost:5}];
+		public function get quoteDataSlicer():Array
+		{
+			var result:Array = [];
+			trace(lotteryQuoteData);
+//			for(var i:int=0;i<lotteryQuoteData[i].@)
+			return result;
+		}
 		//--------------------------------------------------------------------------
 		//
 		//  Protected properties

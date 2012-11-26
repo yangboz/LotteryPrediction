@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+Copyright (c) 2008, Thomas W. Gonzalez
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+www.brightpointinc.com
+
+*/	
+-->
+<microCharts:BaseMicroChart xmlns:mx="http://www.adobe.com/2006/mxml" 
+				xmlns="http://www.degrafa.com/2007" xmlns:microCharts="com.brightPoint.microCharts.*">
+<mx:Script>
+	<![CDATA[
+	
+		private var _sum:Number;
+		
+		override protected function setMinMax():void {
+			super.setMinMax();
+			_sum=0;
+			for (var i:int;i<chartData.length;i++) {
+				_sum+=chartData[i];
+			}
+			myRepeater.count=chartData.length;
+		}
+
+		private function calcStartAngle(iteration:Number, target:Object):Number {
+			if (!chartData) return 0;
+			var ret:Number;
+			if (iteration==0) return 0;
+			ret=360*(chartData[iteration-1]/_sum);
+		//	trace("startAngle " + ret);
+			return ret;
+		}
+		
+		private function calcArc(iteration:Number, target:Object):Number {
+			if (!chartData) return 0;
+			var ret:Number=360*(chartData[iteration]/_sum);
+		//	trace("arc : " + ret);
+			if (isNaN(ret)) ret=0;
+			return ret;
+		}
+	]]>
+</mx:Script>
+	<microCharts:graphicsData>
+	<GeometryGroup>
+		<geometry>
+		<GeometryRepeater id="myRepeater">
+			<EllipticalArc closureType="pie" width="18" height="18" fill="{myFill}" stroke="{myStroke}"/>
+			<modifiers>
+				<PropertyModifier property="arc" offset="{calcArc}" offsetOperator="none"/>
+				<PropertyModifier property="startAngle" offset="{calcStartAngle}" offsetOperator="add"/>
+				<!--PropertyModifier property="fill.alpha" offset="-.05"/-->
+			</modifiers>
+		</GeometryRepeater>
+	</geometry>
+	<fills>
+		<SolidFill id="myFill" color="0xDDDDFF" alpha=".3"/>
+	</fills>
+	<strokes>
+		<SolidStroke id="myStroke" color="0x333333" weight="1"/>
+	</strokes>
+	 </GeometryGroup>
+	</microCharts:graphicsData>
+</microCharts:BaseMicroChart>

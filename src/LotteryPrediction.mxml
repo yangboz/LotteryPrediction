@@ -4,7 +4,7 @@
 			   xmlns:mx="library://ns.adobe.com/flex/mx"
 			   width="100%"
 			   height="100%"
-			   creationComplete="application1_creationCompleteHandler(event)">
+			   creationComplete="application1_creationCompleteHandler(event)" xmlns:controls="com.brightPoint.controls.*">
 	<fx:Script>
 		<![CDATA[
 			import com.lookbackon.AI.artificalNeuralNetwork.NeuralNetWork;
@@ -17,7 +17,7 @@
 			import com.lookbackon.lp.view.components.GATrainDataInputView;
 			import com.lookbackon.utils.MathUtil;
 			import com.masterbaboon.AdvancedMath;
-
+			
 			import mx.collections.ArrayCollection;
 			import mx.core.IFlexDisplayObject;
 			import mx.events.FlexEvent;
@@ -36,7 +36,9 @@
 			public var mutationProability:Number=.8;
 			//
 			public var isRunning:Boolean=true;
-
+			//Model
+			[Bindable]
+			private var model:BallsModel = BallsModel.getInstance();
 			//
 			protected function application1_creationCompleteHandler(event:FlexEvent):void
 			{
@@ -176,7 +178,9 @@
 		<mx:LineChart id="lineChart"
 					  showDataTips="true"
 					  width="100%"
-					  height="100%">
+					  height="100%"
+					  dataProvider="{model.lotteryQuoteData}"
+					  >
 			<!-- series filters -->
 			<mx:seriesFilters>
 				<fx:Array/>
@@ -251,7 +255,8 @@
 				</mx:LineSeries>
 			</mx:series>
 		</mx:LineChart>
-
+		
+		<controls:ChartDataSlicer width="100%" target="{lineChart}" id="hslicer" height="50" dataField="date" labelField="date"/> 
 
 		<mx:Form width="100%"
 				 height="100%">
