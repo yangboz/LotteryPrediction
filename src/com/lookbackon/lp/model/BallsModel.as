@@ -2,6 +2,7 @@ package com.lookbackon.lp.model
 {
 	import com.lookbackon.lp.model.vo.BallVO;
 	
+	import mx.collections.ArrayCollection;
 	import mx.collections.XMLListCollection;
 
 	//--------------------------------------------------------------------------
@@ -70,6 +71,7 @@ package com.lookbackon.lp.model
 			);
 		//for updating view
 		public var lotteryQuoteData:XMLList;
+		public var lotteryQuoteDataAC:ArrayCollection;
 		//----------------------------------
 		//  CONSTANTS
 		//----------------------------------
@@ -88,6 +90,7 @@ package com.lookbackon.lp.model
 //			for(var i:int=0;i<lotteryQuoteData[i].@)
 			return result;
 		}
+		
 		//--------------------------------------------------------------------------
 		//
 		//  Protected properties

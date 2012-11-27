@@ -20,6 +20,7 @@
     <application path="LotteryPrediction.mxml"/>
     <application path="FlexUnitCompilerApplication.mxml"/>
     <application path="FlexUnitApplication.mxml"/>
+    <application path="AmChartsSample.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>

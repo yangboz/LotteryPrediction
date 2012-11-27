@@ -26,6 +26,9 @@ package com.lookbackon.lp.proxy
 	
 	import flash.events.Event;
 	import flash.net.URLRequest;
+	
+	import mx.collections.ArrayCollection;
+	import mx.formatters.DateFormatter;
 
 	//--------------------------------------------------------------------------
 	//
@@ -164,6 +167,23 @@ package com.lookbackon.lp.proxy
 			model.lotteryQuoteData = model.lotteryData[0].quote;
 			//update view(illigal operation based on MVC design pattern)
 //			FlexGlobals.topLevelApplication.lineChart.dataProvider = model.lotteryData[0].quote;
+			//
+			var quoteArr:Array = [];
+			for each (var quote:XML in model.lotteryQuoteData) {
+//				trace(quote.@date.toString());
+				var df:DateFormatter = new DateFormatter();
+				df.formatString = "MM/DD/YYYY";
+				var formattedDate:String = df.format(quote.@date.toString());
+				var firstDate:Date =  DateFormatter.parseDateString(formattedDate);
+				quoteArr.push( {
+					"red":quote.@red.toString(),
+					"blue":quote.@blue.toString(),
+//					"date":quote.@date.toString()
+					"date":firstDate
+				} );
+			}		
+			trace(quoteArr.toString());
+			model.lotteryQuoteDataAC = new ArrayCollection(quoteArr);
 		}
 		//
 		private function indexToDate(index:String):String
