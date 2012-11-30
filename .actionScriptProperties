@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<actionScriptProperties analytics="false" mainApplicationPath="LotteryPrediction.mxml" projectUUID="403e05f0-1509-47e0-bc3f-ef2d13e3977a" version="10">
+<actionScriptProperties analytics="false" mainApplicationPath="LotteryPrediction_FlexCharts.mxml" projectUUID="403e05f0-1509-47e0-bc3f-ef2d13e3977a" version="10">
   <compiler additionalCompilerArguments="-locale en_US" autoRSLOrdering="true" copyDependentFiles="true" flex3CompatMode="false" flexSDK="Flex 4.6.0" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="false" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" removeUnusedRSL="true" sourceFolderPath="src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
     <compilerSourcePath/>
     <libraryPath defaultLinkType="0">
@@ -17,10 +17,11 @@
     <sourceAttachmentPath/>
   </compiler>
   <applications>
-    <application path="LotteryPrediction.mxml"/>
-    <application path="FlexUnitCompilerApplication.mxml"/>
+    <application path="LotteryPrediction_AmCharts_RCX.mxml"/>
+    <application path="LotteryPrediction_AmCharts_R.mxml"/>
     <application path="FlexUnitApplication.mxml"/>
-    <application path="AmChartsSample.mxml"/>
+    <application path="LotteryPrediction_FlexCharts.mxml"/>
+    <application path="FlexUnitCompilerApplication.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>

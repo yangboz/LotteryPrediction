@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:amcharts="http://www.amcharts.com/com_internal"
+			   creationComplete="generateChartData()">
+	<fx:Script>
+		<![CDATA[
+			import com.lookbackon.lp.model.BallsModel;
+			import com.lookbackon.lp.proxy.CSVParser;
+
+			import mx.collections.ArrayCollection;
+
+			[Bindable]
+			private var chartData1:ArrayCollection=new ArrayCollection();
+
+			//Model
+			[Bindable]
+			private var model:BallsModel=BallsModel.getInstance();
+
+			private function generateChartData():void
+			{
+//						                  var firstDate:Date = new Date();
+//						                 firstDate.setDate(firstDate.getDate() - 1000);
+//						                  
+//						                   for(var i:Number = 0; i < 1000; i++)
+//							                  {
+//								                      var newDate:Date = new Date(firstDate);
+//								                     
+//								                      newDate.setDate(newDate.getDate() + i);
+//								                      
+//								                     var a1:Number = Math.round(Math.random() * (40 + i)) + 100 + i;
+//								                       var b1:Number   = Math.round(Math.random() * (1000 + i)) + 500 + i * 2;
+//								                     
+//								                       chartData1.addItem({date:newDate, a:a1, b:b1});
+//								                   }
+				//external csv data parse
+				var parser:CSVParser=new CSVParser();
+				parser.parse("../lottery-data/red_bule_balls_2003.csv");
+			}
+		]]>
+	</fx:Script>
+
+	<amcharts:AmStockChart x="10"
+						   y="10"
+						   width="100%"
+						   height="100%">
+
+		<amcharts:dataSets>
+
+			<amcharts:DataSet dataProvider="{model.lotteryQuoteDataAC}"
+							  categoryField="date"
+							  title="ALL BALLS">
+				<amcharts:fieldMappings>
+					<amcharts:FieldMapping fromField="red"
+										   toField="value"/>
+					<amcharts:FieldMapping fromField="blue"
+										   toField="volume"/>
+				</amcharts:fieldMappings>
+			</amcharts:DataSet>
+
+		</amcharts:dataSets>
+
+		<amcharts:panels>
+
+			<amcharts:StockPanel title="RED BALL"
+								 height="70%"
+								 showCategoryAxis="false"
+								 color="0xff0000">
+				<amcharts:stockGraphs>
+					<amcharts:StockGraph id="g1"
+										 valueField="value"
+										 color="0xff0000"/>
+				</amcharts:stockGraphs>
+				<amcharts:stockLegend>
+					<amcharts:StockLegend/>
+				</amcharts:stockLegend>
+			</amcharts:StockPanel>
+
+			<amcharts:StockPanel title="BLUE BALLS"
+								 height="30%">
+				<amcharts:stockGraphs>
+					<amcharts:StockGraph valueField="volume"
+										 type="column"
+										 fillAlphas="[1]"
+										 lineAlpha="0"
+										 color="0x0000ff"/>
+				</amcharts:stockGraphs>
+				<amcharts:stockLegend>
+					<amcharts:StockLegend/>
+				</amcharts:stockLegend>
+			</amcharts:StockPanel>
+
+		</amcharts:panels>
+
+		<amcharts:chartScrollbarSettings>
+			<amcharts:ChartScrollbarSettings graph="{g1}"/>
+		</amcharts:chartScrollbarSettings>
+
+		<amcharts:periodSelector>
+			<amcharts:PeriodSelector position="bottom">
+				<!-- predefined periods -->
+				<amcharts:periods>
+					<amcharts:PeriodButton label="10D"
+										   period="DD"
+										   count="10"
+										   width="40"/>
+					<amcharts:PeriodButton label="1M"
+										   period="MM"
+										   count="1"
+										   width="40"/>
+					<amcharts:PeriodButton label="6M"
+										   period="MM"
+										   count="6"
+										   width="40"/>
+					<amcharts:PeriodButton selected="true"
+										   label="1Y"
+										   period="YYYY"
+										   count="1"
+										   width="40"/>
+					<amcharts:PeriodButton label="MAX"
+										   period="MAX"
+										   width="40"/>
+					<amcharts:PeriodButton label="YTD"
+										   period="YTD"
+										   width="40"/>
+				</amcharts:periods>
+			</amcharts:PeriodSelector>
+		</amcharts:periodSelector>
+
+	</amcharts:AmStockChart>
+</s:Application>

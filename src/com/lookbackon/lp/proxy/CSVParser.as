@@ -29,6 +29,7 @@ package com.lookbackon.lp.proxy
 	
 	import mx.collections.ArrayCollection;
 	import mx.formatters.DateFormatter;
+	import mx.utils.ObjectUtil;
 
 	//--------------------------------------------------------------------------
 	//
@@ -168,21 +169,39 @@ package com.lookbackon.lp.proxy
 			//update view(illigal operation based on MVC design pattern)
 //			FlexGlobals.topLevelApplication.lineChart.dataProvider = model.lotteryData[0].quote;
 			//
+			var firstDate:Date=new Date(2003, 1, 1);
+			firstDate.setDate(firstDate.getDate() - 1000);
+			var index:int = 0;
+			//
 			var quoteArr:Array = [];
 			for each (var quote:XML in model.lotteryQuoteData) {
-//				trace(quote.@date.toString());
+				//
+				trace(quote.@date.toString());
 				var df:DateFormatter = new DateFormatter();
 				df.formatString = "MM/DD/YYYY";
 				var formattedDate:String = df.format(quote.@date.toString());
-				var firstDate:Date =  DateFormatter.parseDateString(formattedDate);
+				var parsedDate:Date = DateFormatter.parseDateString(formattedDate.concat(" 00:00:00"));
+				//TODO:validate the correct date
+				//@see:http://od-eon.com/blogs/alumni/horia/major-headache-flex-as3-date-formatting/
+				//@see:http://stackoverflow.com/questions/1394997/actionscript-3-date-adds-1-month
+				var trueDate:Date =  new Date(parsedDate);
+				//fake date.
+				var fakeDate:Date=new Date(firstDate);
+				fakeDate.setDate(fakeDate.getDate() + index);
+				//
 				quoteArr.push( {
-					"red":quote.@red.toString(),
-					"blue":quote.@blue.toString(),
+					"red":Number(quote.@red),
+					"blue":Number(quote.@blue),
 //					"date":quote.@date.toString()
-					"date":firstDate
+					"date":trueDate
+//					"date":fakeDate
 				} );
+				trace("trueDate:",trueDate,"fakeDate:",fakeDate);
+				//
+				index++;
 			}		
-			trace(quoteArr.toString());
+//			trace(quoteArr.toString());
+			trace(ObjectUtil.toString(quoteArr));
 			model.lotteryQuoteDataAC = new ArrayCollection(quoteArr);
 		}
 		//
@@ -190,7 +209,7 @@ package com.lookbackon.lp.proxy
 		{
 			var numOfSerialPerWeek:int = 3;
 			var maxOfSerial:int = 154;
-			var numOfWeeksOfYear:int = 154/3+1;
+			var numOfWeeksOfYear:int = 154/3+1;//TODO:leap year handler.
 			var dateRange:int = 365/154;
 			var curYear:int = int(index.substr(0,4));
 			var curSerial:int = int(index)-curYear*1000;
@@ -210,6 +229,8 @@ package com.lookbackon.lp.proxy
 			var daysOfMonth:int = 30;
 			var mm:int = dayNumber/30 +1;
 			var day:int = dayNumber%30;
+			//index of 0 based day handler
+			if(day==0) day++;
 			var result:String = mm.toString().concat("/",day,"/",year);
 			return result;
 		}
