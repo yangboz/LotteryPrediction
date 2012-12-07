@@ -256,8 +256,6 @@
 			</mx:series>
 		</mx:LineChart>
 		
-		<controls:ChartDataSlicer width="100%" target="{lineChart}" id="hslicer" height="50" dataField="date" labelField="date"/> 
-
 		<mx:Form width="100%"
 				 height="100%">
 			<mx:FormItem width="100%"
