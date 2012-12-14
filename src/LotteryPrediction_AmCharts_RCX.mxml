@@ -94,7 +94,7 @@
 				<amcharts:DataSet id="ds1"
 								  dataProvider="{model.lotteryQuoteDataAC}"
 								  categoryField="date"
-								  title="True history data set"
+								  title="History data set"
 								  color="0xff0000"
 								  >
 					<amcharts:fieldMappings>

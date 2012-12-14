@@ -25,3 +25,6 @@ http://www.brightpointinc.com/flexdemos/chartslicer/chartslicersample.html
 # Screen shots
 
 ![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/src/assets/screenshots/lp.jpg)
+
+# Python Pandas impl(TBC)
+

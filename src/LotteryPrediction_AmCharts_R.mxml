@@ -36,7 +36,7 @@
 //								                   }
 				//external csv data parse
 				var parser:CSVParser=new CSVParser();
-				parser.parse("../lottery-data/red_bule_balls_2003.csv");
+				parser.parse("../lottery-data/red_bule_balls_2008.csv");
 			}
 		]]>
 	</fx:Script>
@@ -50,6 +50,7 @@
 
 			<amcharts:DataSet dataProvider="{model.lotteryQuoteDataAC}"
 							  categoryField="date"
+							  color="0xff0000"
 							  title="ALL BALLS">
 				<amcharts:fieldMappings>
 					<amcharts:FieldMapping fromField="red"
