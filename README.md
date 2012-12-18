@@ -28,5 +28,12 @@ http://www.brightpointinc.com/flexdemos/chartslicer/chartslicersample.html
 ![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/src/assets/screenshots/lp_time_slice.jpg)
 ![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/src/assets/screenshots/lp_time_slice_compare.jpg)
 
+# Live Demos
+
+http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_AmCharts_R.swf 
+http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_AmCharts_RCX.swf
+http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_FlexCharts.swf
+
+
 # Python Pandas impl(TBC)
 
