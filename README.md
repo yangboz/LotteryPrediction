@@ -43,3 +43,5 @@ http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_FlexCharts.swf
 [Python data-mining and pattern recognition packages] (http://www.researchpipeline.com/wordpress/2011/02/15/python-data-mining-packages/)
 
 [Python Machine Learning Packages](http://web.media.mit.edu/~stefie10/technical/pythonml.html)
+
+[Conference on 100 YEARS OF ALAN TURING AND 20 YEARS OF SLAIS](http://ailab.ijs.si/dunja/TuringSLAIS-2012/)
