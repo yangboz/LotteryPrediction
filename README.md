@@ -38,5 +38,7 @@ http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_FlexCharts.swf
 # Python Pandas impl(TBC)
 
 # Links
+[Python data analysis_pandas](http://pandas.pydata.org/)
+[Python data minning_orange](http://orange.biolab.si/)
 [Python data-mining and pattern recognition packages] (http://www.researchpipeline.com/wordpress/2011/02/15/python-data-mining-packages/)
 
