@@ -34,9 +34,6 @@ http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_AmCharts_R.swf
 http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_AmCharts_RCX.swf
 http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_FlexCharts.swf
 
-
-# Python Pandas impl(TBC)
-
 # Links
 
 [Python data analysis_pandas](http://pandas.pydata.org/)
