@@ -17,7 +17,7 @@ for i in range( 5 ):
 
 # read from a text file, one number per row
 #vec5 = np.loadtxt( "data" )
-vec5 = np.loadtxt( "../datasets/" )
+vec5 = np.loadtxt( "../datasets/ch02_presidents.txt", usecols=(2,))
 
 # Add a vector to another
 v1 = vec1 + vec2

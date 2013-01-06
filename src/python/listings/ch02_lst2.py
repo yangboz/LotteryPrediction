@@ -5,7 +5,7 @@ from numpy import *
 def kde( z, w, xv ):
     return sum( exp(-0.5*((z-xv)/w)**2)/sqrt(2*pi*w**2) )
 
-d = loadtxt( "data", usecols=(2,) )
+d = loadtxt( "../datasets/ch02_presidents.txt", usecols=(2,) )
 
 w = 2.5
 
