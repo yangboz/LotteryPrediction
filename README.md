@@ -28,6 +28,8 @@ http://www.brightpointinc.com/flexdemos/chartslicer/chartslicersample.html
 ![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/src/assets/screenshots/lp_time_slice.jpg)
 ![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/src/assets/screenshots/lp_time_slice_compare.jpg)
 
+![Snapshot of "Dot plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/src/python/snapshots/blue_balls_dot_plot.png)
+
 # Live Demos
 
 http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_AmCharts_R.swf 
