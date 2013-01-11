@@ -1,6 +1,7 @@
 import pandas
 import time
 import matplotlib.pyplot as plt
+import random
 
 #See http://www.red-dove.com/python_logging.html
 import logging
@@ -36,7 +37,22 @@ plt.ylabel('Dot,number of blue balls')
 plt.xlabel('Dot,number of duplication')
 plt.show()
 #Jitter plot
-
+idx_min = min(dfs_blue_balls_count_values)
+idx_max = max(dfs_blue_balls_count_values)
+idx_len = idx_max-idx_min
+print("min:",idx_min,"max:",idx_max)
+num_jitter = 0
+samplers = random.sample(range(idx_min,idx_max),idx_len)
+while num_jitter < 5:
+    samplers += random.sample(range(idx_min,idx_max),idx_len)
+    num_jitter += 1
+##lots of jitter effect
+print("samplers:",samplers)
+plt.plot(samplers,'ro',label='Jitter plot')
+plt.ylabel('Jitter,number of blue balls')
+plt.xlabel('Jitter,number of duplication')
+plt.legend()
+plt.show()
 #Histograms and Kernel Density Estimates:
 #Scott rule,
 #This rule assumes that the data follows a Gaussian distribution;
