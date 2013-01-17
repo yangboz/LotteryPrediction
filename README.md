@@ -53,32 +53,32 @@ http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_FlexCharts.swf
 
 # Roadmap:
 
-Phase I.Graphics: Looking at Data; 
+## Phase I.Graphics: Looking at Data; 
 
-#1.A single variable:Shape and Distribution; ( Dot/Jitter plots,Histograms and Kernel Density Estimates,Cumulative Distribution Function,Rank-Order...)
-#2.Two variables:Establishing Relationships; ( Scatter plots,Conquering Noise,Logarithmic Plots,Banking...)
-#3.Time as a variable: Time-Series Analysis; (Smoothing,Correlation,Filters,Convolutions..)
-#4.More than two variables;Graphical Multivariate Analysis;(False-color Plots,Multi plots...)
-#5.Intermezzo:A Data Analysis Session;(Session,gnuplot..)
-#6...
+###1.A single variable:Shape and Distribution; ( Dot/Jitter plots,Histograms and Kernel Density Estimates,Cumulative Distribution Function,Rank-Order...)
+###2.Two variables:Establishing Relationships; ( Scatter plots,Conquering Noise,Logarithmic Plots,Banking...)
+###3.Time as a variable: Time-Series Analysis; (Smoothing,Correlation,Filters,Convolutions..)
+###4.More than two variables;Graphical Multivariate Analysis;(False-color Plots,Multi plots...)
+###5.Intermezzo:A Data Analysis Session;(Session,gnuplot..)
+###6...
 
-Phase II.Analytics: Modeling Data;
+## Phase II.Analytics: Modeling Data;
 
-#1.Guesstimation and the back of envelope;
-#2.Models from scaling arguments;
-#3.Arguments from probability models;
-#4...
+###1.Guesstimation and the back of envelope;
+###2.Models from scaling arguments;
+###3.Arguments from probability models;
+###4...
 
-Phase III.Computation: Mining Data;
+## Phase III.Computation: Mining Data;
 
-#1.Simulations;
-#2.Find clusters;
-#3.Seeing the forest for the decision trees;
-#4....
+###1.Simulations;
+###2.Find clusters;
+###3.Seeing the forest for the decision trees;
+###4....
 
-Phase IV.Applications: Using Data;
+## Phase IV.Applications: Using Data;
 
-#1.Reporting, BI (Business Intelligence),Dashboard;
-#2.Financial calculations and modeling;
-#3.Predictive analytics;
-#4....
+###1.Reporting, BI (Business Intelligence),Dashboard;
+###2.Financial calculations and modeling;
+###3.Predictive analytics;
+###4....
