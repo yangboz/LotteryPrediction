@@ -97,6 +97,6 @@ for nbins in dfs_blue_balls_count_values:
     plt.plot( x, cf[0], label=str(nbins) )
 
 plt.legend()
-plt.xlabel('CDF,number of appear time by user name')
-plt.ylabel('CDF,counter of appear time by user name')
+plt.xlabel('CDF,number of appear time by blue ball number')
+plt.ylabel('CDF,counter of appear time by blue ball number')
 plt.show()
