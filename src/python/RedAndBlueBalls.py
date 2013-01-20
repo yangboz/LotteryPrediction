@@ -100,3 +100,12 @@ plt.legend()
 plt.xlabel('CDF,number of appear time by blue ball number')
 plt.ylabel('CDF,counter of appear time by blue ball number')
 plt.show()
+
+###Optional: Comparing Distributions with Probability Plots and QQ Plots
+###Quantile plot of the server data. A quantile plot is a graph of the CDF with the x and y axes interchanged.
+###Probability plot for the data set shown,a standard normal distribution:
+###@see: http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.probplot.html
+import scipy.stats as stats
+prob_measurements = numpy.random.normal(loc = 20, scale = 5, size=num_of_bin)   
+stats.probplot(prob_measurements, dist="norm", plot=plt)
+plt.show()
