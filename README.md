@@ -29,6 +29,8 @@ http://www.brightpointinc.com/flexdemos/chartslicer/chartslicersample.html
 ![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/src/assets/screenshots/lp_time_slice_compare.jpg)
 
 ![Snapshot of "Dot plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/src/python/snapshots/blue_balls_dot_plot.png)
+![Snapshot of "Histogram plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/src/python/snapshots/blue_balls_histogram_plot.png)
+![Snapshot of "KDE plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/src/python/snapshots/blue_balls_gussian_kde_plot.png)
 
 # Live Demos
 
