@@ -83,3 +83,20 @@ plt.plot(xs,density(xs))
 plt.xlabel('KDE,number of appear time by blue ball number')
 plt.ylabel('KDE,counter of appear time by blue ball number')
 plt.show()
+##CDF(The Cumulative Distribution Function
+from scipy.stats import cumfreq
+idx_max = max(dfs_blue_balls_count_values)
+hi = idx_max
+a = numpy.arange(hi) ** 2
+#    for nbins in ( 2, 20, 100 ):
+for nbins in dfs_blue_balls_count_values:    
+    cf = cumfreq(a, nbins)  # bin values, lowerlimit, binsize, extrapoints
+    w = hi / nbins
+    x = numpy.linspace( w/2, hi - w/2, nbins )  # care
+    # print x, cf
+    plt.plot( x, cf[0], label=str(nbins) )
+
+plt.legend()
+plt.xlabel('CDF,number of appear time by user name')
+plt.ylabel('CDF,counter of appear time by user name')
+plt.show()
