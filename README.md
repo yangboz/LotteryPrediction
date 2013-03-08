@@ -1,19 +1,10 @@
-/*====================================================================
-Copyright (C) 2010 GODPAPER <Knight.zhou>
- 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
- 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
- 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-=====================================================================*/
+# Preface
+
+Predicting is making claims about something that will happen, often based on information from past and from current state.
+![Screenshot of "Prediction"](http://blog.lookbackon.com/wp-content/uploads/2010/12/prediction.gif)
+
+Everyone solves the problem of prediction every day with various degrees of success. For example weather, harvest, energy consumption, movements of forex (foreign exchange) currency pairs or of shares of stocks, earthquakes, and a lot of other stuff needs to be predicted.
+...
 # Refs:
 
 http://www.scriptol.com/programming/list-algorithms.php
@@ -21,6 +12,8 @@ http://www.scriptol.com/programming/list-algorithms.php
 http://www.ipedr.com/vol25/54-ICEME2011-N20032.pdf
 
 http://www.brightpointinc.com/flexdemos/chartslicer/chartslicersample.html
+
+http://blog.lookbackon.com/?page_id=2506
 
 # Screen shots
 
