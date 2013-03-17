@@ -35,6 +35,8 @@ http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_FlexCharts.swf
 
 # Links
 
+[Python logutils](https://code.google.com/p/logutils/)
+
 [Python data analysis_pandas](http://pandas.pydata.org/)
 
 [Python data minning_orange](http://orange.biolab.si/)

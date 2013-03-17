@@ -13,7 +13,7 @@ class UTCFormatter(logging.Formatter):
     converter = time.gmtime # not documented, had to read the module's source code ;-)
 #read CSV
 #balls = pd.read_csv('../../lottery-data/red_bule_balls_2003.csv')
-balls = pandas.read_csv('../../lottery-data/red_bule_balls_2003.csv',sep=';',header=None)
+balls = pandas.read_csv('../../lottery-data/red_bule_balls.csv',sep=';',header=None)
 print(balls)
 #Dot plot,a very simple way to gain an initial sense of the data set is to create a dot plot.
 ##Dot plot display
