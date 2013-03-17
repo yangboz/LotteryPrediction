@@ -11,3 +11,10 @@ You should have received a copy of the GNU General Public License along with thi
 
 Third Party Software
 ====================
+
+Python: http://docs.python.org/2/license.html
+
+Adobe FLEX SDK: https://github.com/apache/flex-sdk/blob/trunk/LICENSE
+
+AmChart free trail: http://www.amcharts.com/
+
