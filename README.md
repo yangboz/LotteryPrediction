@@ -49,6 +49,8 @@ http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_FlexCharts.swf
 
 [USA Draft Lottery 1970](http://lib.stat.cmu.edu/DASL/Stories/DraftLottery.html )
 
+[Python Multivarite Pattern Analysis](http://www.pymvpa.org/)
+
 # Roadmap:
 
 ## Phase I.Graphics: Looking at Data; 
