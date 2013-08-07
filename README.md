@@ -53,6 +53,12 @@ http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_FlexCharts.swf
 
 [Python Multivarite Pattern Analysis](http://www.pymvpa.org/)
 
+[BigML](https://bigml.com)
+
+[Patsy](http://patsy.readthedocs.org)
+
+[StatModel](http://statsmodels.sourceforge.net/)
+
 
 # Roadmap:
 
