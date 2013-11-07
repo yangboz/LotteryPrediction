@@ -152,3 +152,7 @@ Phase IV.Applications: Using Data;
 3.Predictive analytics;
 
 4....
+
+#TODO:
+
+1.Using D3JS Chart to visualization the data; (http://techslides.com/over-1000-d3-js-examples-and-demos/)
