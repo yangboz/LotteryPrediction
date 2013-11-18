@@ -157,6 +157,6 @@ Phase IV.Applications: Using Data;
 
 1.Using D3JS Chart to visualization the data; (http://techslides.com/over-1000-d3-js-examples-and-demos/);
 
-2.Using Tableau software trail and error;
+2.Using Tableau software trail and error; (http://www.tableausoftware.com/)
 
 3.Using PredictionIO API; (http://prediction.io)
