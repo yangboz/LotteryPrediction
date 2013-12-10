@@ -61,6 +61,7 @@ http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_FlexCharts.swf
 
 [Neural Lotto — Lottery Drawing Predicting Method](http://www.neural-lotto.net/index.php/en/)
 
+[Random.org](http://www.random.org/clients/http/)
 
 # Roadmap:
 
