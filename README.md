@@ -63,6 +63,8 @@ http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_FlexCharts.swf
 
 [Random.org](http://www.random.org/clients/http/)
 
+[Predictive Analytics Guide](http://www.predictiveanalyticsworld.com/predictive_analytics.php)
+
 # Roadmap:
 
 ## Phase I.Graphics: Looking at Data; 
