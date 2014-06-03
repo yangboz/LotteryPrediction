@@ -167,3 +167,5 @@ Phase IV.Applications: Using Data;
 3.Using PredictionIO API; (http://prediction.io)
 
 4.Using Free Tempo-DB for time series database storage ; (https://tempo-db.com/docs/batch-import/python-script/)
+
+5.Using BigML API; (https://bigml.com/)
