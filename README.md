@@ -169,3 +169,5 @@ Phase IV.Applications: Using Data;
 4.Using Free Tempo-DB for time series database storage ; (https://tempo-db.com/docs/batch-import/python-script/)
 
 5.Using BigML API; (https://bigml.com/)
+
+6.Pandas+scikit+matplotlib+IPython Notebook; (http://nbviewer.ipython.org/url/www.onewinner.me/en/devoxxML.ipynb)
