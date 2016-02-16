@@ -171,3 +171,5 @@ Phase IV.Applications: Using Data;
 5.Using BigML API; (https://bigml.com/)
 
 6.Pandas+scikit+matplotlib+IPython Notebook; (http://nbviewer.ipython.org/url/www.onewinner.me/en/devoxxML.ipynb)
+
+7.Implementing a highly scalable prediction; (http://www.slideshare.net/SpringCentral/implementing-a-highly-scalable-stock-prediction-system-with-r-apache-geode-and-spring-xd)
