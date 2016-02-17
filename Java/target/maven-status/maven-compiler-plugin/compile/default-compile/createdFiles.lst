@@ -1,0 +1,6 @@
+info/smartkit/domain/Greeting.class
+info/smartkit/configs/SimpleCORSFilter.class
+info/smartkit/controllers/GreetingController.class
+info/smartkit/LotteryPredictionApplication.class
+info/smartkit/configs/SwaggerConfig.class
+info/smartkit/configs/StaticResourceConfiguration.class
