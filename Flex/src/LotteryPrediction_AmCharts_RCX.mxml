@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This example is made using amStock Flex component. Visit http://flex.amcharts.com to see more examples -->
+
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:amcharts="http://www.amcharts.com/com_internal"
+			   backgroundColor="#FFFFFF"
+			   width="100%"
+			   height="100%"
+			   creationComplete="{generateChartData()}"
+			   >
+
+	<fx:Script>
+		<![CDATA[
+			import com.amcharts.stock.events.StockBulletEvent;
+			import com.lookbackon.lp.model.BallsModel;
+			import com.lookbackon.lp.proxy.CSVParser;
+			
+			import mx.collections.ArrayCollection;
+
+			// generate some random data for 4 different data providers
+
+			[Bindable]
+			private var chartData1:ArrayCollection=new ArrayCollection();
+
+			[Bindable]
+			private var chartData2:ArrayCollection=new ArrayCollection();
+
+			[Bindable]
+			private var chartData3:ArrayCollection=new ArrayCollection();
+
+			[Bindable]
+			private var chartData4:ArrayCollection=new ArrayCollection();
+			
+			//Model
+			[Bindable]
+			private var model:BallsModel=BallsModel.getInstance();
+
+			private function generateChartData():void
+			{
+				var firstDate:Date=new Date(2010, 1, 5);
+				firstDate.setDate(firstDate.getDate() - 1000);
+
+				for (var i:Number=0; i < 1000; i++)
+				{
+					var newDate:Date=new Date(firstDate);
+
+					newDate.setDate(newDate.getDate() + i);
+
+					var a1:Number=Math.round(Math.random() * (40 + i)) + 100 + i;
+					var b1:Number=Math.round(Math.random() * (1000 + i)) + 500 + i * 2;
+
+					var a2:Number=Math.round(Math.random() * (100 + i)) + 200 + i;
+					var b2:Number=Math.round(Math.random() * (1000 + i)) + 600 + i * 2;
+
+					var a3:Number=Math.round(Math.random() * (100 + i)) + 200;
+					var b3:Number=Math.round(Math.random() * (1000 + i)) + 600 + i * 2;
+
+					var a4:Number=Math.round(Math.random() * (100 + i)) + 200 + i;
+					var b4:Number=Math.round(Math.random() * (100 + i)) + 600 + i;
+
+					chartData1.addItem({date: newDate, a: a1, b: b1});
+					chartData2.addItem({date: newDate, a: a2, b: b2});
+					chartData3.addItem({date: newDate, a: a3, b: b3});
+					chartData4.addItem({date: newDate, a: a4, b: b4});
+				}
+				//external csv data parse
+				var parser:CSVParser=new CSVParser();
+				parser.parse("../lottery-data/red_bule_balls_2003.csv");
+			}
+
+			private function handleEventClick(event:StockBulletEvent):void
+			{
+				trace(event.eventObject.description);
+			}
+		]]>
+	</fx:Script>
+
+	<s:VGroup width="100%"
+			  height="100%"
+			  paddingBottom="5"
+			  paddingTop="5"
+			  paddingLeft="5"
+			  paddingRight="5">
+
+		<amcharts:AmStockChart width="100%"
+							   height="100%"
+							   mainDataSet="{ds1}"
+							   clickStockEvent="{handleEventClick(event)}">
+
+			<amcharts:dataSets>
+				<amcharts:DataSet id="ds1"
+								  dataProvider="{model.lotteryQuoteDataAC}"
+								  categoryField="date"
+								  title="History data set"
+								  color="0xff0000"
+								  >
+					<amcharts:fieldMappings>
+						<amcharts:FieldMapping fromField="red"
+											   toField="value"
+											   />
+						<amcharts:FieldMapping fromField="blue"
+											   toField="volume"/>
+					</amcharts:fieldMappings>
+				</amcharts:DataSet>
+
+				<!--<amcharts:DataSet id="ds2"
+								  dataProvider="{chartData2}"
+								  categoryField="date"
+								  title="Second data set">
+					<amcharts:fieldMappings>
+						<amcharts:FieldMapping fromField="a"
+											   toField="value"/>
+						<amcharts:FieldMapping fromField="b"
+											   toField="volume"/>
+					</amcharts:fieldMappings>
+				</amcharts:DataSet>
+
+				<amcharts:DataSet id="ds3"
+								  dataProvider="{chartData3}"
+								  categoryField="date"
+								  title="Third data set">
+					<amcharts:fieldMappings>
+						<amcharts:FieldMapping fromField="a"
+											   toField="value"/>
+						<amcharts:FieldMapping fromField="b"
+											   toField="volume"/>
+					</amcharts:fieldMappings>-->
+
+					<!-- EVENTS -->
+					<!--<amcharts:stockEvents>
+						<amcharts:StockEvent date="{new Date(2009,6,26)}"
+											 type="flag"
+											 backgroundColor="#85CDE6"
+											 graph="{g1}"
+											 text="A"
+											 description="This is description of an event"/>
+						<amcharts:StockEvent date="{new Date(2009,8,19)}"
+											 graph="{g1}"
+											 text="B"
+											 description="This is description of an event"/>
+						<amcharts:StockEvent date="{new Date(2009,9,3)}"
+											 type="flag"
+											 backgroundColor="#85CDE6"
+											 graph="{g1}"
+											 text="C"
+											 description="This is description of an event"/>
+						<amcharts:StockEvent date="{new Date(2009,10,6)}"
+											 graph="{g1}"
+											 text="D"
+											 description="This is description of an event"/>
+						<amcharts:StockEvent date="{new Date(2009,11,5)}"
+											 graph="{g1}"
+											 text="E"
+											 description="This is description of an event"/>
+						<amcharts:StockEvent date="{new Date(2009,11,5)}"
+											 graph="{g1}"
+											 text="F"
+											 description="This is description of an event"/>
+						<amcharts:StockEvent date="{new Date(2009,11,25)}"
+											 graph="{g1}"
+											 text="G"
+											 description="This is description of an event"/>
+					</amcharts:stockEvents>
+
+				</amcharts:DataSet>
+
+				<amcharts:DataSet id="ds4"
+								  dataProvider="{chartData4}"
+								  categoryField="date"
+								  title="Fourth data set">
+					<amcharts:fieldMappings>
+						<amcharts:FieldMapping fromField="a"
+											   toField="value"/>
+						<amcharts:FieldMapping fromField="b"
+											   toField="volume"/>
+					</amcharts:fieldMappings>
+				</amcharts:DataSet>-->
+			</amcharts:dataSets>
+
+
+			<amcharts:panels>
+				<amcharts:StockPanel height="60%"
+									 showCategoryAxis="false">
+					<amcharts:stockGraphs>
+						<amcharts:StockGraph id="g1"
+											 type="smoothedLine"
+											 valueField="value"
+											 compareField="value"
+											 comparable="true"/>
+					</amcharts:stockGraphs>
+				</amcharts:StockPanel>
+
+				<amcharts:StockPanel height="40%">
+					<amcharts:stockGraphs>
+						<amcharts:StockGraph id="g2"
+											 cornerRadiusTop="8"
+											 valueField="volume"
+											 type="column"
+											 fillAlphas="[1]"
+											 lineAlpha="0"/>
+					</amcharts:stockGraphs>
+				</amcharts:StockPanel>
+
+			</amcharts:panels>
+
+			<amcharts:dataSetSelector>
+				<amcharts:DataSetSelector position="left"
+										  width="160"/>
+			</amcharts:dataSetSelector>
+
+			<amcharts:periodSelector>
+				<amcharts:PeriodSelector position="left"
+										 width="160">
+					<amcharts:periods>
+						<amcharts:PeriodButton label="10 Days"
+											   period="DD"
+											   count="10"/>
+						<amcharts:PeriodButton label="1 Month"
+											   period="MM"
+											   count="1"/>
+						<amcharts:PeriodButton label="2 Month"
+											   period="MM"
+											   count="2"/>
+						<amcharts:PeriodButton label="6 Months"
+											   period="MM"
+											   count="6"/>
+						<amcharts:PeriodButton selected="true"
+											   label="1 Year"
+											   period="YYYY"
+											   count="1"/>
+						<amcharts:PeriodButton label="MAX"
+											   period="MAX"/>
+					</amcharts:periods>
+				</amcharts:PeriodSelector>
+			</amcharts:periodSelector>
+
+			<amcharts:stockEventsSettings>
+				<amcharts:StockEventsSettings backgroundColor="#CDF52C"/>
+			</amcharts:stockEventsSettings>
+
+			<amcharts:chartScrollbarSettings>
+				<amcharts:ChartScrollbarSettings height="30"
+												 graph="{g1}"/>
+			</amcharts:chartScrollbarSettings>
+
+			<amcharts:chartCursorSettings>
+				<amcharts:ChartCursorSettings valueBalloonsEnabled="true"/>
+			</amcharts:chartCursorSettings>
+
+			<amcharts:panelsSettings>
+				<amcharts:PanelsSettings startDuration="1"
+										 sequencedAnimation="true"/>
+			</amcharts:panelsSettings>
+
+		</amcharts:AmStockChart>
+	</s:VGroup>
+
+
+</s:Application>

@@ -17,15 +17,15 @@ http://blog.lookbackon.com/?page_id=2506
 
 # Screen shots
 
-![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/src/assets/screenshots/lp.jpg)
-![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/src/assets/screenshots/lp_time_slice.jpg)
-![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/src/assets/screenshots/lp_time_slice_compare.jpg)
+![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/Flex/src/assets/screenshots/lp.jpg)
+![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/Flex/src/assets/screenshots/lp_time_slice.jpg)
+![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/Flex/src/assets/screenshots/lp_time_slice_compare.jpg)
 
-![Snapshot of "Dot plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/src/python/snapshots/blue_balls_dot_plot.png)
-![Snapshot of "Histogram plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/src/python/snapshots/blue_balls_histogram_plot.png)
-![Snapshot of "KDE plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/src/python/snapshots/blue_balls_gussian_kde_plot.png)
-![Snapshot of "CDF plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/src/python/snapshots/blue_balls_cdf_plot.png)
-![Snapshot of "Probability plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/src/python/snapshots/blue_balls_probability_plot.png)
+![Snapshot of "Dot plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/snapshots/blue_balls_dot_plot.png)
+![Snapshot of "Histogram plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/snapshots/blue_balls_histogram_plot.png)
+![Snapshot of "KDE plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/snapshots/blue_balls_gussian_kde_plot.png)
+![Snapshot of "CDF plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/snapshots/blue_balls_cdf_plot.png)
+![Snapshot of "Probability plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/snapshots/blue_balls_probability_plot.png)
 
 # Live Demos
 
@@ -41,7 +41,7 @@ http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_FlexCharts.swf
 
 [Python data minning_orange](http://orange.biolab.si/)
 
-[Python data-mining and pattern recognition packages] (http://www.researchpipeline.com/wordpress/2011/02/15/python-data-mining-packages/)
+[Python data-mining and pattern recognition packages](http://www.researchpipeline.com/wordpress/2011/02/15/python-data-mining-packages/)
 
 [Python Machine Learning Packages](http://web.media.mit.edu/~stefie10/technical/pythonml.html)
 

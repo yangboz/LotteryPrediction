@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testrun name="" >
-<testsuite  name="Default Test Suite" project="LotteryPrediction">
-<testsuite name="flexUnitTests:CSVTest" type="testcaseclass"/>
-</testsuite>
-<portNumber value="8765" />
-</testrun>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   width="100%"
+			   height="100%"
+			   creationComplete="application1_creationCompleteHandler(event)" xmlns:controls="com.brightPoint.controls.*">
+	<fx:Script>
+		<![CDATA[
+			import com.lookbackon.AI.artificalNeuralNetwork.NeuralNetWork;
+			import com.lookbackon.AI.artificalNeuralNetwork.NeuronNetWorkTest;
+			import com.lookbackon.AI.geneticAlgorithm.GALabel;
+			import com.lookbackon.lp.Constants;
+			import com.lookbackon.lp.model.BallsModel;
+			import com.lookbackon.lp.model.vo.BallVO;
+			import com.lookbackon.lp.proxy.CSVParser;
+			import com.lookbackon.lp.view.components.GATrainDataInputView;
+			import com.lookbackon.utils.MathUtil;
+			import com.masterbaboon.AdvancedMath;
+			
+			import mx.collections.ArrayCollection;
+			import mx.core.IFlexDisplayObject;
+			import mx.events.FlexEvent;
+			import mx.graphics.SolidColorStroke;
+			import mx.managers.PopUpManager;
+			//about ANN
+			private var inputData:ArrayCollection=new ArrayCollection();
+			private var outputData:ArrayCollection=new ArrayCollection();
+
+			[Bindable]
+			private var nnw:NeuralNetWork=new NeuralNetWork();
+
+			[Bindable]
+			private var recordCount:int;
+			//about GA
+			public var mutationProability:Number=.8;
+			//
+			public var isRunning:Boolean=true;
+			//Model
+			[Bindable]
+			private var model:BallsModel = BallsModel.getInstance();
+			//
+			protected function application1_creationCompleteHandler(event:FlexEvent):void
+			{
+//				var annTest:NeuronNetWorkTest = new NeuronNetWorkTest();
+				//
+				// probability of the faces; 6 is about twice more likely to appear
+				//				var p:Array = [0.14, 0.14, 0.14, 0.14, 0.14, 0.3];
+				var pRed:Number=1 / 6;
+//				var pBlue:Number = Number((1/MathUtil.premutate(16,1)).toFixed(10));
+				var p:Array=[pRed, pRed, pRed, pRed, pRed, pRed];
+				// count the number of times a face appears
+				var count:Array=AdvancedMath.zeros(6);
+
+				// throw dice 1000 times
+				var face:int;
+				for (var i:int=0; i < 1000; i++)
+				{
+					face=AdvancedMath.sampleMultinomial(p);
+					count[face]++;
+				}
+				trace(count);
+
+				// e.g.
+				trace(MathUtil.factorial(5));
+				trace(MathUtil.permutateArray([1, 2, 3], 3));
+				trace(MathUtil.permutation(3, 2));
+				trace(MathUtil.toFactoradic(3));
+				trace(MathUtil.toFactoradic2(3, 2));
+				var blue:Number=Number((1 / MathUtil.premutate(16, 1)).toFixed(10));
+				var red:Number=Number((1 / MathUtil.premutate(33, 4)).toFixed(10));
+				trace("blue:", blue, "red:", red, "blue+red:", (blue * red).toFixed(10));
+				//
+				redSeries.setStyle("stroke", new Stroke(0xFF0000));
+				redSeries.setStyle("fill", "red");
+				redSeries.setStyle("radius", 2);
+				redSeries.setStyle("adjustedRadius", 1);
+				redSeries.setStyle("itemRollOverColor", "red");
+				redSeries.setStyle("itemDisabledColor", "red");
+				redSeries.setStyle("itemSelectionColor", "red");
+				//
+				blueSeries.setStyle("stroke", new Stroke(0x0000FF));
+				blueSeries.setStyle("fill", "blue");
+				blueSeries.setStyle("radius", 2);
+				blueSeries.setStyle("adjustedRadius", 1);
+				blueSeries.setStyle("itemRollOverColor", "blue");
+				blueSeries.setStyle("itemDisabledColor", "blue");
+				blueSeries.setStyle("itemSelectionColor", "blue");
+				//external csv data parse
+				var parser:CSVParser=new CSVParser();
+				parser.parse("../lottery-data/red_bule_balls_2003.csv");
+			}
+
+			private function annTrainButton_clickHandler(event:MouseEvent):void
+			{
+				//
+//				this.inputData.addItem(new BallVarietyVO([1,2,3,4,5,6],[7]));
+				//
+//				this.outputData.addItem(new BallVarietyVO([2,7,9,11,22,33],[1]));
+				//14 samples with 6 inputs
+				inputData=new ArrayCollection([[1, 0, 0, 0.85, 0.85, 0], [1, 0, 0, 0.80, 0.90, 1], [0, 1, 0, 0.83, 0.86, 0], [0, 0, 1, 0.70, 0.96, 0], [0, 0, 1, 0.68, 0.80, 0], [0, 0, 1, 0.65, 0.70, 1], [0, 1, 0, 0.64, 0.65, 1], [1, 0, 0, 0.72, 0.95, 0], [1, 0, 0, 0.69, 0.70, 0], [0, 0, 1, 0.75, 0.80, 0], [1, 0, 0, 0.75, 0.70, 1], [0, 1, 0, 0.72, 0.90, 1], [0, 1, 0, 0.81, 0.75, 0], [0, 0, 1, 0.71, 0.91, 1]]);
+
+				//a two-dimensional array of 14 samples and 1 output Neuron
+				//14 samples with 1 target output
+				outputData=new ArrayCollection([[0], [0], [1], [1], [1], [0], [1], [0], [1], [1], [1], [1], [1], [0]]);
+				//
+				var recordCount:int=inputData.length;
+				//
+				if (recordCount != (outputData.length))
+				{
+					throw new Error("number of samples in input data is not equal to number of samples in output data!!");
+				}
+				//
+				nnw.initialize(inputData, outputData, 7);
+				//
+				for (var counter:int=0; counter < NeuralNetWork.iterations; counter++)
+				{
+					for (var sample:int=0; sample < recordCount; sample++)
+					{
+						nnw.feedForward(sample);
+						nnw.backPropagate();
+						trace("Count:", counter.toFixed(4), " Output : ", nnw.outputNeurons.gett(0).output.toFixed(4), " OutputTraining : ", nnw.outputNeurons.gett(0).outputTraning.toFixed(4), " Learning Rate : ", nnw.learning_rate);
+					}
+
+					//adjust the learning rate after every training sample iteration
+					nnw.learning_rate=Number(1 / (Number(counter) + 1));
+					trace("After adjust Count: : " + counter.toFixed(4) + " Output : " + nnw.outputNeurons.gett(0).output.toFixed(4) + " OutputTraining : " + nnw.outputNeurons.gett(0).outputTraning.toFixed(4) + " Learning Rate : " + nnw.learning_rate);
+
+				}
+			}
+
+			//GA alogrithm train
+			protected function gaTrainButton_clickHandler(event:MouseEvent):void
+			{
+				var numbers:Array=predictionNumberLabel.text.split(",");
+				var len:int=numbers.length;
+				var variety:uint=Constants.VARIETY_RED;
+				for (var i:int=0; i < len; i++)
+				{
+					if (i > 6)
+						variety=Constants.VARIETY_BLUE;
+					var gaLabel:GALabel=new GALabel(variety);
+					gaLabel.number=numbers[i];
+					gaLabel.text=numbers[i];
+					gaTrainHGroup.addElement(gaLabel);
+				}
+			}
+
+			protected function stepButton_clickHandler(event:MouseEvent):void
+			{
+				this.isRunning=!this.isRunning;
+			}
+
+			protected function inputButton_clickHandler(event:MouseEvent):void
+			{
+				var iFlexDisplayObject:IFlexDisplayObject=PopUpManager.createPopUp(this as DisplayObject, GATrainDataInputView, true);
+				PopUpManager.centerPopUp(iFlexDisplayObject);
+				GATrainDataInputView(iFlexDisplayObject).closeButton.visible=false;
+			}
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+
+	<s:VGroup width="100%"
+			  height="100%">
+		<mx:ApplicationControlBar dock="false"
+								  width="100%">
+			<mx:Spacer width="100%"/>
+			<mx:Label fontSize="24"
+					  text="Lottery prediction using GA+BF ANN+FL"
+					  toolTip="GeneticAlogrithm+ArtificalNeuralNetwork+FuzzyLogicControl lottery prediction"/>
+			<mx:Spacer width="100%"/>
+			<mx:Legend dataProvider="{lineChart}"/>
+		</mx:ApplicationControlBar>
+
+		<mx:LineChart id="lineChart"
+					  showDataTips="true"
+					  width="100%"
+					  height="100%"
+					  dataProvider="{model.lotteryQuoteData}"
+					  >
+			<!-- series filters -->
+			<mx:seriesFilters>
+				<fx:Array/>
+			</mx:seriesFilters>
+
+			<mx:backgroundElements>
+				<mx:GridLines gridDirection="both"/>
+			</mx:backgroundElements>
+			<!-- vertical axis -->
+			<mx:verticalAxis>
+				<mx:LinearAxis baseAtZero="false"
+							   title="All balls"/>
+			</mx:verticalAxis>
+			<!-- horizontal axis -->
+			<mx:horizontalAxis>
+				<mx:CategoryAxis id="ca"
+								 categoryField="@date"
+								 title="Time line"/>
+			</mx:horizontalAxis>
+			<!-- horizontal axis renderer -->
+			<mx:horizontalAxisRenderers>
+				<mx:AxisRenderer axis="{ca}"
+								 canDropLabels="true"/>
+			</mx:horizontalAxisRenderers>
+			<!-- series -->
+			<mx:series>
+				<mx:LineSeries id="blueSeries"
+							   yField="@blue"
+							   form="curve"
+							   displayName="Blue">
+					<mx:lineStroke>
+						<mx:Stroke color="blue"
+								   weight="1"
+								   alpha="1"/>
+					</mx:lineStroke>
+					<mx:itemRenderer>
+						<fx:Component>
+							<!--<mx:CandlestickItemRenderer/>
+							<mx:CrossItemRenderer />
+							<mx:ShadowBoxItemRenderer/>
+							<mx:DiamondItemRenderer/>
+							<mx:TriangleItemRenderer/>-->
+							<mx:CircleItemRenderer scaleX="1.5"
+												   scaleY="1.5"
+												   alpha="1">
+							</mx:CircleItemRenderer>
+						</fx:Component>
+					</mx:itemRenderer>
+				</mx:LineSeries>
+				<mx:LineSeries id="redSeries"
+							   yField="@red"
+							   form="curve"
+							   displayName="Red">
+					<mx:lineStroke>
+						<mx:Stroke color="red"
+								   weight="1"
+								   alpha="1"/>
+					</mx:lineStroke>
+					<mx:itemRenderer>
+						<fx:Component>
+							<!--<mx:CandlestickItemRenderer/>
+							<mx:CrossItemRenderer />
+							<mx:ShadowBoxItemRenderer/>
+							<mx:DiamondItemRenderer/>
+							<mx:TriangleItemRenderer/>-->
+							<mx:CircleItemRenderer scaleX="1.5"
+												   scaleY="1.5"
+												   alpha="1">
+							</mx:CircleItemRenderer>
+						</fx:Component>
+					</mx:itemRenderer>
+				</mx:LineSeries>
+			</mx:series>
+		</mx:LineChart>
+		
+		<mx:Form width="100%"
+				 height="100%">
+			<mx:FormItem width="100%"
+						 label="">
+				<s:HGroup width="100%"
+						  verticalAlign="middle">
+					<s:Label text="Function:"/>
+					<s:TextInput text="p(n,r)"/>
+					<s:Label text="Reds:"/>
+					<s:HSlider stepSize="1"
+							   minimum="1"
+							   maximum="33"/>
+					<s:Label text="Blue:"/>
+					<s:HSlider stepSize="1"
+							   minimum="1"
+							   maximum="16"/>
+				</s:HGroup>
+			</mx:FormItem>
+			<mx:FormItem width="100%"
+						 label="Window Size:">
+				<s:Spinner/>
+			</mx:FormItem>
+			<mx:FormItem width="100%"
+						 label="Pattern in window:">
+				<s:Spinner/>
+			</mx:FormItem>
+			<mx:FormItem width="100%"
+						 label="Node of examples:">
+				<s:Spinner value="{recordCount}"/>
+			</mx:FormItem>
+			<mx:FormItem width="100%"
+						 label="Distance of predicted:">
+				<s:Spinner/>
+			</mx:FormItem>
+			<mx:FormItem width="100%">
+				<s:HGroup id="gaTrainHGroup"
+						  width="100%"
+						  verticalAlign="middle">
+					<s:Button id="inputButton"
+							  label="InputValue:"
+							  click="inputButton_clickHandler(event)"/>
+					<s:Label id="predictionNumberLabel"/>
+					<s:Button label="GA Training Set"
+							  click="gaTrainButton_clickHandler(event)"/>
+					<s:Button label="Net Parameters"/>
+					<s:Button label="Result Set"/>
+				</s:HGroup>
+			</mx:FormItem>
+			<mx:FormItem width="100%">
+				<s:HGroup width="100%">
+					<s:Button label="ANN Train"
+							  click="annTrainButton_clickHandler(event)"/>
+					<s:Button label="Step"
+							  click="stepButton_clickHandler(event)"/>
+					<s:CheckBox label="Show Result"
+								selected="true"
+								enabled="false"/>
+				</s:HGroup>
+			</mx:FormItem>
+			<mx:FormItem width="100%">
+				<s:HGroup width="100%"
+						  verticalAlign="middle">
+					<s:Label text="Epoch number:"/>
+					<s:TextInput/>
+					<s:Label text="Error rate:"/>
+					<s:TextInput text="{1-nnw.learning_rate}"/>
+				</s:HGroup>
+			</mx:FormItem>
+		</mx:Form>
+
+	</s:VGroup>
+</s:Application>
