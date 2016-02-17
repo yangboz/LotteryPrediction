@@ -1,5 +1,8 @@
 Using Spring-boot/XD with Spark/R prediction with MachineLearning
 
+#Live
+http://localhost:8080/swagger-ui.html
+
 #Reference:
 
 Architecture: https://github.com/Pivotal-Open-Source-Hub/StockInference-Spark
