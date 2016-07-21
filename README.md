@@ -20,6 +20,8 @@ http://www.brightpointinc.com/flexdemos/chartslicer/chartslicersample.html
 
 http://blog.lookbackon.com/?page_id=2506
 
+http://stats.stackexchange.com/questions/68662/using-deep-learning-for-time-series-prediction
+
 # Screen shots
 
 ![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/Flex/src/assets/screenshots/lp.jpg)
