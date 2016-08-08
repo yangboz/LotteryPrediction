@@ -1,7 +1,7 @@
 # Preface
 
 Predicting is making claims about something that will happen, often based on information from past and from current state.
-![Screenshot of "Prediction"](http://blog.lookbackon.com/wp-content/uploads/2010/12/prediction.gif)
+![Screenshot of "Prediction"](http://www.obitko.com/tutorials/neural-network-prediction/images/prediction.gif)
 
 Everyone solves the problem of prediction every day with various degrees of success. For example weather, harvest, energy consumption, movements of forex (foreign exchange) currency pairs or of shares of stocks, earthquakes, and a lot of other stuff needs to be predicted.
 ...
@@ -11,6 +11,8 @@ Everyone solves the problem of prediction every day with various degrees of succ
 With classification, deep learning is able to establish correlations between, say, pixels in an image and the name of a person. You might call this a static prediction. By the same token, exposed to enough of the right data, deep learning is able to establish correlations between present events and future events. The future event is like the label in a sense. Deep learning doesn’t necessarily care about time, or the fact that something hasn’t happened yet. Given a time series, deep learning may read a string of number and predict the number most likely to occur next.
 
 # Refs:
+
+http://deeplearning4j.org/usingrnns.html
 
 http://www.scriptol.com/programming/list-algorithms.php
 
