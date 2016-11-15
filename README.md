@@ -38,9 +38,9 @@ http://stats.stackexchange.com/questions/68662/using-deep-learning-for-time-seri
 
 # Live Demos
 
-http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_AmCharts_R.swf 
-http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_AmCharts_RCX.swf
-http://www.lookbackon.com/lab/LotteryPrediction/LotteryPrediction_FlexCharts.swf
+https://yangboz.github.io/labs/lp/LotteryPrediction_AmCharts_R.swf 
+https://yangboz.github.io/labs/lp/LotteryPrediction_AmCharts_RCX.swf
+https://yangboz.github.io/labs/lp/LotteryPrediction_FlexCharts.swf
 
 # Links
 
