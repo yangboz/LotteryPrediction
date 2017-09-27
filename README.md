@@ -183,3 +183,7 @@ Phase IV.Applications: Using Data;
 
 7.Implementing a highly scalable prediction; (http://www.slideshare.net/SpringCentral/implementing-a-highly-scalable-stock-prediction-system-with-r-apache-geode-and-spring-xd)
  (https://github.com/Pivotal-Open-Source-Hub/StockInference-Spark)
+ 
+ ## References
+ 
+TensorFlow Tutorial for Time Series Prediction: https://github.com/tgjeon/TensorFlow-Tutorials-for-Time-Series
