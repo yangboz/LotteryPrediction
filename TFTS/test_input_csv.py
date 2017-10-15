@@ -2,13 +2,13 @@
 from __future__ import print_function
 import tensorflow as tf
 
-# csv_file_name = './data/period_trend.csv'
+csv_file_name = './data/multivariate_periods.csv'
 # reader = tf.contrib.timeseries.CSVReader(csv_file_name)
-csv_file_name = './data/red_bule_balls_2003.csv'
+# csv_file_name = './data/red_bule_balls_2003.csv'
 reader = tf.contrib.timeseries.CSVReader(
       csv_file_name,
       column_names=((tf.contrib.timeseries.TrainEvalFeatures.TIMES,)
-                    + (tf.contrib.timeseries.TrainEvalFeatures.VALUES,) * 7))
+                    + (tf.contrib.timeseries.TrainEvalFeatures.VALUES,) * 5))
 
 with tf.Session() as sess:
     data = reader.read_full()

@@ -3,6 +3,7 @@ from pandas import Series
 from matplotlib import pyplot
 import numpy as np
 from statsmodels.tsa.ar_model import AR
+from statsmodels.tsa.ar_model import ARResults
 from sklearn.metrics import mean_squared_error
 
 series = Series.from_csv('daily-total-female-births-in-cal.csv',header=0)
@@ -52,6 +53,34 @@ pyplot.show()
 # pyplot.savefig('./FemaleBirthPrediction.png')
 
 # 2. Finalize and Save Time Series Forecast Model
+# save model to file
+model_fit.save('ar_model.pkl')
+# save different data_set
+np.save('ar_data.npy',X)
+# save last observe value.
+np.save('ar_obs.npy',[series.values[:-1]])
 
+# load AR model
 
+loaded = ARResults.load('ar_model.pkl')
+print(loaded.params)
+# get real observation
+observation = 48
+# load the saved data
+data = np.load('ar_data.npy')
+last_ob = np.load('ar_obs.npy')
+# update and save differenced observation
+diffed = observation - last_ob[0]
+data = np.append(data, [diffed], axis=0)
+np.save('ar_data.npy', data)
+# update and save real observation
+last_ob[0] = observation
+np.save('ar_obs.npy', last_ob)
+# 3. Make a Time Series Forecast
+# predictions = model.predict(start=len(last_ob),end=len(lag),params=coef)
+predictions = prediction(coef,data)
+# transform prediction
+yhat = predictions+last_ob[0]
+print("transform predictions: %f" % yhat)
+# 4. Update Forecast Model
 
