@@ -3,8 +3,12 @@ from __future__ import print_function
 import tensorflow as tf
 from tensorflow.contrib.timeseries.python.timeseries import CSVReader
 
-csv_filename = './data/red_bule_balls_2003.csv'
-reader = tf.contrib.timeseries.CSVReader(csv_filename)
+csv_file_name = './data/red_bule_balls_2003.csv'
+# reader = tf.contrib.timeseries.CSVReader(csv_filename)
+reader = tf.contrib.timeseries.CSVReader(
+      csv_file_name,
+      column_names=((tf.contrib.timeseries.TrainEvalFeatures.TIMES,)
+                    + (tf.contrib.timeseries.TrainEvalFeatures.VALUES,) * 7))
 
 with tf.Session() as sess:
     data = reader.read_full()
