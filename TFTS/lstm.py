@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+"""A more advanced example, of building an RNN-based time series model."""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -24,17 +25,32 @@ import tensorflow as tf
 
 from tensorflow.contrib.timeseries.python.timeseries import estimators as ts_estimators
 from tensorflow.contrib.timeseries.python.timeseries import model as ts_model
-import matplotlib
-matplotlib.use("agg")
-import matplotlib.pyplot as plt
+
+try:
+  import matplotlib  # pylint: disable=g-import-not-at-top
+  matplotlib.use("TkAgg")  # Need Tk for interactive plots.
+  from matplotlib import pyplot  # pylint: disable=g-import-not-at-top
+  HAS_MATPLOTLIB = True
+except ImportError:
+  # Plotting requires matplotlib, but the unit test running this code may
+  # execute in an environment without it (i.e. matplotlib is not a build
+  # dependency). We'd still like to test the TensorFlow-dependent parts of this
+  # example.
+  HAS_MATPLOTLIB = False
+
+_MODULE_PATH = path.dirname(__file__)
+_DATA_FILE = path.join(_MODULE_PATH, "data/multivariate_periods.csv")
+
 
 class _LSTMModel(ts_model.SequentialTimeSeriesModel):
   """A time series model-building example using an RNNCell."""
 
   def __init__(self, num_units, num_features, dtype=tf.float32):
     """Initialize/configure the model object.
+
     Note that we do not start graph building here. Rather, this object is a
     configurable factory for TensorFlow graphs which are run by an Estimator.
+
     Args:
       num_units: The number of units in the model's LSTMCell.
       num_features: The dimensionality of the time series (features per
@@ -55,9 +71,11 @@ class _LSTMModel(ts_model.SequentialTimeSeriesModel):
 
   def initialize_graph(self, input_statistics):
     """Save templates for components, which can then be used repeatedly.
+
     This method is called every time a new graph is created. It's safe to start
     adding ops to the current default graph here, but the graph should be
     constructed from scratch.
+
     Args:
       input_statistics: A math_utils.InputStatistics object.
     """
@@ -71,7 +89,8 @@ class _LSTMModel(ts_model.SequentialTimeSeriesModel):
     # Transforms LSTM output into mean predictions.
     self._predict_from_lstm_output = tf.make_template(
         name_="predict_from_lstm_output",
-        func_=lambda inputs: tf.layers.dense(inputs=inputs, units=self.num_features),
+        func_=
+        lambda inputs: tf.layers.dense(inputs=inputs, units=self.num_features),
         create_scope_now_=True)
 
   def get_start_state(self):
@@ -87,24 +106,16 @@ class _LSTMModel(ts_model.SequentialTimeSeriesModel):
          for state_element
          in self._lstm_cell.zero_state(batch_size=1, dtype=self.dtype)])
 
-  def _transform(self, data):
-    """Normalize data based on input statistics to encourage stable training."""
-    mean, variance = self._input_statistics.overall_feature_moments
-    return (data - mean) / variance
-
-  def _de_transform(self, data):
-    """Transform data back to the input scale."""
-    mean, variance = self._input_statistics.overall_feature_moments
-    return data * variance + mean
-
   def _filtering_step(self, current_times, current_values, state, predictions):
     """Update model state based on observations.
+
     Note that we don't do much here aside from computing a loss. In this case
     it's easier to update the RNN state in _prediction_step, since that covers
     running the RNN both on observations (from this method) and our own
     predictions. This distinction can be important for probabilistic models,
     where repeatedly predicting without filtering should lead to low-confidence
     predictions.
+
     Args:
       current_times: A [batch size] integer Tensor.
       current_values: A [batch size, self.num_features] floating point Tensor
@@ -118,8 +129,11 @@ class _LSTMModel(ts_model.SequentialTimeSeriesModel):
     """
     state_from_time, prediction, lstm_state = state
     with tf.control_dependencies(
-            [tf.assert_equal(current_times, state_from_time)]):
-      transformed_values = self._transform(current_values)
+        [tf.assert_equal(current_times, state_from_time)]):
+      # Subtract the mean and divide by the variance of the series.  Slightly
+      # more efficient if done for a whole window (using the normalize_features
+      # argument to SequentialTimeSeriesModel).
+      transformed_values = self._scale_data(current_values)
       # Use mean squared error across features for the loss.
       predictions["loss"] = tf.reduce_mean(
           (prediction - transformed_values) ** 2, axis=-1)
@@ -135,7 +149,7 @@ class _LSTMModel(ts_model.SequentialTimeSeriesModel):
         inputs=previous_observation_or_prediction, state=lstm_state)
     next_prediction = self._predict_from_lstm_output(lstm_output)
     new_state_tuple = (current_times, next_prediction, new_lstm_state)
-    return new_state_tuple, {"mean": self._de_transform(next_prediction)}
+    return new_state_tuple, {"mean": self._scale_back_data(next_prediction)}
 
   def _imputation_step(self, current_times, state):
     """Advance model state across a gap."""
@@ -145,46 +159,54 @@ class _LSTMModel(ts_model.SequentialTimeSeriesModel):
     return state
 
   def _exogenous_input_step(
-          self, current_times, current_exogenous_regressors, state):
+      self, current_times, current_exogenous_regressors, state):
     """Update model state based on exogenous regressors."""
     raise NotImplementedError(
         "Exogenous inputs are not implemented for this example.")
 
 
-if __name__ == '__main__':
-  tf.logging.set_verbosity(tf.logging.INFO)
-  csv_file_name = path.join("./data/multivariate_periods.csv")
+def train_and_predict(csv_file_name=_DATA_FILE, training_steps=200):
+  """Train and predict using a custom time series model."""
+  # Construct an Estimator from our LSTM model.
+  estimator = ts_estimators._TimeSeriesRegressor(
+      model=_LSTMModel(num_features=5, num_units=128),
+      optimizer=tf.train.AdamOptimizer(0.001))
   reader = tf.contrib.timeseries.CSVReader(
       csv_file_name,
       column_names=((tf.contrib.timeseries.TrainEvalFeatures.TIMES,)
                     + (tf.contrib.timeseries.TrainEvalFeatures.VALUES,) * 5))
   train_input_fn = tf.contrib.timeseries.RandomWindowInputFn(
       reader, batch_size=4, window_size=32)
-
-  estimator = ts_estimators._TimeSeriesRegressor(
-      model=_LSTMModel(num_features=5, num_units=128),
-      optimizer=tf.train.AdamOptimizer(0.001))
-
-  estimator.train(input_fn=train_input_fn, steps=200)
+  estimator.train(input_fn=train_input_fn, steps=training_steps)
   evaluation_input_fn = tf.contrib.timeseries.WholeDatasetInputFn(reader)
   evaluation = estimator.evaluate(input_fn=evaluation_input_fn, steps=1)
   # Predict starting after the evaluation
   (predictions,) = tuple(estimator.predict(
       input_fn=tf.contrib.timeseries.predict_continuation_input_fn(
           evaluation, steps=100)))
-
-  observed_times = evaluation["times"][0]
+  times = evaluation["times"][0]
   observed = evaluation["observed"][0, :, :]
-  evaluated_times = evaluation["times"][0]
-  evaluated = evaluation["mean"][0]
-  predicted_times = predictions['times']
-  predicted = predictions["mean"]
+  predicted_mean = numpy.squeeze(numpy.concatenate(
+      [evaluation["mean"][0], predictions["mean"]], axis=0))
+  all_times = numpy.concatenate([times, predictions["times"]], axis=0)
+  return times, observed, all_times, predicted_mean
 
-  plt.figure(figsize=(15, 5))
-  plt.axvline(99, linestyle="dotted", linewidth=4, color='r')
-  observed_lines = plt.plot(observed_times, observed, label="observation", color="k")
-  evaluated_lines = plt.plot(evaluated_times, evaluated, label="evaluation", color="g")
-  predicted_lines = plt.plot(predicted_times, predicted, label="prediction", color="r")
-  plt.legend(handles=[observed_lines[0], evaluated_lines[0], predicted_lines[0]],
-             loc="upper left")
-  plt.savefig('predict_result.png')
+
+def main(unused_argv):
+  if not HAS_MATPLOTLIB:
+    raise ImportError(
+        "Please install matplotlib to generate a plot from this example.")
+  (observed_times, observations,
+   all_times, predictions) = train_and_predict()
+  pyplot.axvline(99, linestyle="dotted")
+  observed_lines = pyplot.plot(
+      observed_times, observations, label="Observed", color="k")
+  predicted_lines = pyplot.plot(
+      all_times, predictions, label="Predicted", color="b")
+  pyplot.legend(handles=[observed_lines[0], predicted_lines[0]],
+                loc="upper left")
+  pyplot.show()
+
+
+if __name__ == "__main__":
+  tf.app.run(main=main)

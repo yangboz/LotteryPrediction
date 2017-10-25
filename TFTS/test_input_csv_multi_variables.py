@@ -1,32 +1,17 @@
-# Copyright 2017 The TensorFlow Authors. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ==============================================================================
-
-from __future__ import absolute_import
-from __future__ import division
+# coding: utf-8
 from __future__ import print_function
-
 from os import path
+import matplotlib.pyplot as plt
 
 import numpy
 import tensorflow as tf
 
 from tensorflow.contrib.timeseries.python.timeseries import estimators as ts_estimators
 from tensorflow.contrib.timeseries.python.timeseries import model as ts_model
+
 import matplotlib
 matplotlib.use("agg")
-import matplotlib.pyplot as plt
+
 
 class _LSTMModel(ts_model.SequentialTimeSeriesModel):
   """A time series model-building example using an RNNCell."""
@@ -151,40 +136,29 @@ class _LSTMModel(ts_model.SequentialTimeSeriesModel):
         "Exogenous inputs are not implemented for this example.")
 
 
-if __name__ == '__main__':
-  tf.logging.set_verbosity(tf.logging.INFO)
-  csv_file_name = path.join("./data/multivariate_periods.csv")
-  reader = tf.contrib.timeseries.CSVReader(
+
+
+csv_file_name = './data/multivariate_periods.csv'
+# reader = tf.contrib.timeseries.CSVReader(csv_file_name)
+# csv_file_name = './data/red_bule_balls_2003.csv'
+reader = tf.contrib.timeseries.CSVReader(
       csv_file_name,
       column_names=((tf.contrib.timeseries.TrainEvalFeatures.TIMES,)
                     + (tf.contrib.timeseries.TrainEvalFeatures.VALUES,) * 5))
-  train_input_fn = tf.contrib.timeseries.RandomWindowInputFn(
-      reader, batch_size=4, window_size=32)
+print(reader)
+data = reader.read_full()
+print(data)
+# estimator
+# @see:https://mp.weixin.qq.com/s?__biz=MzI0ODcxODk5OA==&mid=2247489403&idx=1&sn=9f004963889104fd83307e48e9ec8709&chksm=e99d2482deeaad94ae1f1154b7c4de91eafa678d2feaebe9183987efd9b38287fdf8d2f3f04a&mpshare=1&scene=1&srcid=0925uD5dshUAN3UoUe9PD4mV&key=f32e811df94f16bf6c056cd27bde2d6cf2de557b042b10eebff3ec8204d94d8b19d5502a0f108ced8ea7006b76087c025b93cb3864bafee6a311dfd9990f974fe965643704ab1c791d9a2355d4b21f1e&ascene=0&uin=MTkyNTE5ODcwMw%3D%3D&devicetype=iMac+MacBookAir6%2C2+OSX+OSX+10.12.6+build(16G29)&version=12020810&nettype=WIFI&fontScale=100&pass_ticket=LQXTGodGb%2B7%2BPVkkVqV4W1EEZLoNH7Wi%2BnJxlbUYnFVsrEsp3ZsvKzcliL9Ezrm7
+estimator = ts_estimators._TimeSeriesRegressor(
+    model= _LSTMModel(num_features=5,num_units=128),
+    optimizer = tf.train.AdamOptimizer(0.001)
+)
+print(estimator)
 
-  estimator = ts_estimators._TimeSeriesRegressor(
-      model=_LSTMModel(num_features=5, num_units=128),
-      optimizer=tf.train.AdamOptimizer(0.001))
-
-  estimator.train(input_fn=train_input_fn, steps=200)
-  evaluation_input_fn = tf.contrib.timeseries.WholeDatasetInputFn(reader)
-  evaluation = estimator.evaluate(input_fn=evaluation_input_fn, steps=1)
-  # Predict starting after the evaluation
-  (predictions,) = tuple(estimator.predict(
-      input_fn=tf.contrib.timeseries.predict_continuation_input_fn(
-          evaluation, steps=100)))
-
-  observed_times = evaluation["times"][0]
-  observed = evaluation["observed"][0, :, :]
-  evaluated_times = evaluation["times"][0]
-  evaluated = evaluation["mean"][0]
-  predicted_times = predictions['times']
-  predicted = predictions["mean"]
-
-  plt.figure(figsize=(15, 5))
-  plt.axvline(99, linestyle="dotted", linewidth=4, color='r')
-  observed_lines = plt.plot(observed_times, observed, label="observation", color="k")
-  evaluated_lines = plt.plot(evaluated_times, evaluated, label="evaluation", color="g")
-  predicted_lines = plt.plot(predicted_times, predicted, label="prediction", color="r")
-  plt.legend(handles=[observed_lines[0], evaluated_lines[0], predicted_lines[0]],
-             loc="upper left")
-  plt.savefig('predict_result.png')
+plt.figure(figsize=(15, 5))
+# plt.plot(data['times'], data['values'], label='origin')
+# plt.plot(evaluation['times'].reshape(-1), evaluation['mean'].reshape(-1), label='evaluation')
+# plt.plot(predictions['times'].reshape(-1), predictions['mean'].reshape(-1), label='prediction')
+# plt.xlabel('time_step')
+plt.show()
