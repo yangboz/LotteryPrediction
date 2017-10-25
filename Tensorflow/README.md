@@ -11,5 +11,6 @@ https://github.com/tgjeon/TensorFlow-Tutorials-for-Time-Series
 https://github.com/hzy46/TensorFlow-Time-Series-Examples
 
 # Screen shots
+2003 red_blue_balls:
 
-![Screenshot of "Prediction"](https://raw.githubusercontent.com/yangboz/LotteryPrediction/master/TFTS/predict_result.png)
+![Screenshot of "Prediction"](https://raw.githubusercontent.com/yangboz/LotteryPrediction/master/Tensorflow/predict_result_redblueballs.png)
