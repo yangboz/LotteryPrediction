@@ -11,3 +11,5 @@ https://github.com/tgjeon/TensorFlow-Tutorials-for-Time-Series
 https://github.com/hzy46/TensorFlow-Time-Series-Examples
 
 # Screen shots
+
+![Screenshot of "Prediction"](https://raw.githubusercontent.com/yangboz/LotteryPrediction/master/TFTS/predict_result.png)
