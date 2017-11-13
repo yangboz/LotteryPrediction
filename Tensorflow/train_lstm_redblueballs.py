@@ -165,13 +165,13 @@ if __name__ == '__main__':
       model=_LSTMModel(num_features=7, num_units=128),
       optimizer=tf.train.AdamOptimizer(0.001))
 
-  estimator.train(input_fn=train_input_fn, steps=200)
+  estimator.train(input_fn=train_input_fn, steps=100)
   evaluation_input_fn = tf.contrib.timeseries.WholeDatasetInputFn(reader)
-  evaluation = estimator.evaluate(input_fn=evaluation_input_fn, steps=4)
+  evaluation = estimator.evaluate(input_fn=evaluation_input_fn, steps=1)
   # Predict starting after the evaluation
   (predictions,) = tuple(estimator.predict(
       input_fn=tf.contrib.timeseries.predict_continuation_input_fn(
-          evaluation, steps=100)))
+          evaluation, steps=4)))
 
   observed_times = evaluation["times"][0]
   observed = evaluation["observed"][0, :, :]
