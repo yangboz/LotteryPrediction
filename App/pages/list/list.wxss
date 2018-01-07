@@ -1,0 +1,96 @@
+/*
+ * 
+ * WordPres版微信小程序
+ * author: jianbo
+ * organization: 守望轩  www.watch-life.net
+ * github:    https://github.com/iamxjb/winxin-app-watch-life.net
+ * 技术支持微信号：iamxjb
+ * 开源协议：MIT
+ * Copyright (c) 2017 https://www.watch-life.net All rights reserved.
+ */
+
+.list-header {
+  padding: 50rpx 0;
+  text-align: left;
+  font-weight: normal;
+  font-size: 40rpx;
+  line-height: 40rpx;
+  color: #21759b;
+  border-bottom: 2rpx solid #ededed;
+  margin-bottom: 48rpx;
+}
+
+/*topic list*/
+
+.topic-common-list {
+  /* padding:30rpx 30rpx; */
+}
+
+.topic-list-item {
+  position: relative;
+  /* border-bottom: 1px solid #eee;   */
+  overflow: hidden;
+  clear: both;
+  /* border: 1px solid #ccc; *//* border-radius: 6px; */
+  margin-bottom: 30rpx;
+  background: #fff;
+}
+
+.topic-list-item  image.cover {
+  width: 100%;
+  height: 375rpx;
+  filter: blur(4px);
+}
+
+.topic-content-title {
+  padding: 16rpx 0rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: absolute;
+  /* border-bottom: 1px solid #fff; */
+  z-index: 2;
+  left: 60rpx;
+  top: 120rpx;
+}
+
+.topic-content-title text {
+  font-size: 48rpx;
+  line-height: 48rpx;
+  color: #fff;
+}
+
+.topic-content-title-line{
+  width: 48px;
+  padding: 16rpx 0rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: absolute;
+  border-bottom: 1px solid #fff; 
+  z-index: 2;
+  left: 64rpx;
+  top: 180rpx;
+}
+
+
+.topic-content-brief {
+  /* padding: 0rpx 30rpx 30rpx; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: absolute;
+  z-index: 2;
+  left: 60rpx;
+  top: 240rpx;
+}
+
+.topic-content-brief text {
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #fff;
+}
+
+.searchKey {
+  color: #121b23;
+}

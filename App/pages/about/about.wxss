@@ -1,0 +1,150 @@
+
+/*
+ * 
+ * WordPres版微信小程序
+ * author: jianbo
+ * organization: 守望轩  www.watch-life.net
+ * github:    https://github.com/iamxjb/winxin-app-watch-life.net
+ * 技术支持微信号：iamxjb
+ * Copyright (c) 2017 https://www.watch-life.net All rights reserved.
+ * 
+ */
+
+@import "../../wxParse/wxParse.wxss";
+ .wrapper{
+  padding: 5rpx;
+}
+
+.excerpt{
+  color:#626262; 
+  font-size:32rpx;
+  line-height:64rpx;
+  text-align: left;
+}
+
+.h2{
+  clear:both;
+  border-width:1px 0;
+  color:#666;
+  text-align: center; 
+  font-size:28rpx;
+  line-height:64rpx;
+  font-weight: bold;
+}
+
+.clearfix{
+  margin:5px 15px;
+  display:inline-block;
+}
+
+.wxParse-a{
+    color: #21759b
+}
+
+.wxParse-p{
+    margin-top: 0.8em;
+    margin-bottom: 0.8em
+}
+
+.wxParse-p image{
+    margin: 0 auto;
+    width: 100% !important;
+    box-shadow: 2rpx 4rpx 16rpx #666
+}
+
+.praisePost
+{
+  position: relative;
+  text-align: left;
+  margin-top: 30rpx;
+  /* border-bottom:2rpx solid #ededed; */
+  margin-bottom: 30rpx;
+  
+  
+}
+
+.praiseTitle
+{
+  text-align: center;
+  font-weight: normal;  
+  line-height: 40rpx;  
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+ /* margin-left: 280rpx; */
+  font-size: 28rpx;
+  color:#959595 !important;
+  vertical-align:middle;  
+ /* width:500rpx; */
+  height:70rpx;
+  border-radius: 30rpx;
+  /* border: 1rpx solid #21759b; */
+  
+ 
+}
+.praiseText
+{
+  text-align: center;
+  font-weight: normal;
+  font-size: 26rpx;
+  line-height: 50rpx;
+  color:#21759b!important;
+  margin-bottom: 20rpx;
+  
+}
+
+.img-like{
+width:50rpx;
+height:50rpx;
+display: inline-block;
+text-align: center;
+margin-right:20rpx;
+margin-top:8rpx;
+}
+
+
+.gravatarLikeImg {
+  margin-top: 4px;
+  border-radius: 50%;
+  /*
+  opacity: 1;
+  transform: scale(1);
+  perspective-origin: top center;
+  transition: all ease-in-out 0.3s;
+  */
+  height: 60rpx;
+  width: 60rpx;
+  margin-right:20rpx;
+}
+
+.praise-button {
+  font-size: 0.785714286rem;
+  font-weight: normal;
+  color:  #fff;
+  background-color: #f85959;
+  background-repeat: repeat-x;
+  margin-top: 24rpx;
+  width: 320rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+}
+
+.praise-button::after{
+  border:none;
+}
+
+.gotowebpage-button {
+  font-size: 0.785714286rem;
+  font-weight: normal;
+  color:  #fff;
+  background-color: #118fff;
+  background-repeat: repeat-x;
+  line-height: 80rpx;
+  margin-top: 40rpx;
+  width: 320rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+}
+
+.gotowebpage-button::after{
+   border: none; 
+}
