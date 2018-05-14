@@ -193,9 +193,9 @@ TensorFlow Tutorial for Time Series Prediction: https://github.com/tgjeon/Tensor
 
 You can help fund the development of web3j by donating to the following wallet addresses:
 
-Ethereum	
+Ethereum: 0xEF83a5fA24ddB0a16cbDF829C0305F3b195ba337
 
-Bitcoin	
+Bitcoin: 1D6tNjbbjNZY54FTzLDGsb4mZ98MDkhLd3
 
 ## Commercial support and training
 
