@@ -21,3 +21,6 @@ https://github.com/hzy46/TensorFlow-Time-Series-Examples
 2003 red_blue_balls prediction:
 
 ![Screenshot of "Prediction"](https://raw.githubusercontent.com/yangboz/LotteryPrediction/master/Tensorflow/predict_result_redblueballs.png)
+
+# More
+https://www.youtube.com/watch?v=d4Sn6ny_5LI
