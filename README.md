@@ -188,15 +188,6 @@ Phase IV.Applications: Using Data;
  
 TensorFlow Tutorial for Time Series Prediction: https://github.com/tgjeon/TensorFlow-Tutorials-for-Time-Series
 
-
-## Donate
-
-You can help fund the development of web3j by donating to the following wallet addresses:
-
-Ethereum: 0xEF83a5fA24ddB0a16cbDF829C0305F3b195ba337
-
-Bitcoin: 1D6tNjbbjNZY54FTzLDGsb4mZ98MDkhLd3
-
 ## Commercial support and training
 
 Commercial support and training is available from contact@smartkit.info.
