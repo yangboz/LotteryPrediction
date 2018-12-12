@@ -1,9 +1,10 @@
 Using Spring-boot/XD with Spark/R prediction with MachineLearning
 
-#Live
-http://localhost:8080/swagger-ui.html
+## DeepLearning4j + SpringBoot/Cloud + Swagger UI
 
-#Reference:
+https://deeplearning4j.org/
+
+## Reference:
 
 Architecture: https://github.com/Pivotal-Open-Source-Hub/StockInference-Spark
 
