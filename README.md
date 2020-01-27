@@ -188,6 +188,12 @@ Phase IV.Applications: Using Data;
  
 TensorFlow Tutorial for Time Series Prediction: https://github.com/tgjeon/TensorFlow-Tutorials-for-Time-Series
 
+## papers
+
+https://www.datascience.us/predicting-success-in-lottery-with-deep-learning/
+
 ## Commercial support and training
 
-Commercial support and training is available from contact@smartkit.info.
+Commercial support and training is available from smartkit@msn.com.
+
+##
