@@ -10,20 +10,6 @@ Everyone solves the problem of prediction every day with various degrees of succ
 
 With classification, deep learning is able to establish correlations between, say, pixels in an image and the name of a person. You might call this a static prediction. By the same token, exposed to enough of the right data, deep learning is able to establish correlations between present events and future events. The future event is like the label in a sense. Deep learning doesn’t necessarily care about time, or the fact that something hasn’t happened yet. Given a time series, deep learning may read a string of number and predict the number most likely to occur next.
 
-# Refs:
-
-http://deeplearning4j.org/usingrnns.html
-
-http://www.scriptol.com/programming/list-algorithms.php
-
-http://www.ipedr.com/vol25/54-ICEME2011-N20032.pdf
-
-http://www.brightpointinc.com/flexdemos/chartslicer/chartslicersample.html
-
-http://blog.lookbackon.com/?page_id=2506
-
-http://stats.stackexchange.com/questions/68662/using-deep-learning-for-time-series-prediction
-
 # Screen shots
 
 ![Screenshot of "LotteryPrediction"](https://raw.github.com/yangboz/LotteryPrediction/master/Flex/src/assets/screenshots/lp.jpg)
@@ -42,7 +28,18 @@ https://yangboz.github.io/labs/lp/LotteryPrediction_AmCharts_R.swf
 https://yangboz.github.io/labs/lp/LotteryPrediction_AmCharts_RCX.swf
 https://yangboz.github.io/labs/lp/LotteryPrediction_FlexCharts.swf
 
-# Links
+# Refs:
+
+http://deeplearning4j.org/usingrnns.html
+
+http://www.scriptol.com/programming/list-algorithms.php
+
+http://www.ipedr.com/vol25/54-ICEME2011-N20032.pdf
+
+http://www.brightpointinc.com/flexdemos/chartslicer/chartslicersample.html
+
+http://stats.stackexchange.com/questions/68662/using-deep-learning-for-time-series-prediction
+
 
 [Python logutils](https://code.google.com/p/logutils/)
 
