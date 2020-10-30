@@ -28,6 +28,16 @@ https://yangboz.github.io/labs/lp/LotteryPrediction_AmCharts_R.swf
 https://yangboz.github.io/labs/lp/LotteryPrediction_AmCharts_RCX.swf
 https://yangboz.github.io/labs/lp/LotteryPrediction_FlexCharts.swf
 
+
+## notes
+
+besides of following  "law of proability","Probability: Independent Events", there are still "Saying "a Tail is due", or "just one more go, my luck is due to change" is called The Gambler's Fallacy" existed.
+
+here we are not garantee to help with you to  win lottery prize. if you got lucky from here. please donate here, we also donate to charities.
+
+## donate  ETH: 0xd2d89b06cad0120dd4f8f9f59f96154bc7712efa
+
+## custom company service mailto: z@smartkit.club
 # Refs:
 
 http://deeplearning4j.org/usingrnns.html
@@ -191,6 +201,6 @@ https://www.datascience.us/predicting-success-in-lottery-with-deep-learning/
 
 ## Commercial support and training
 
-Commercial support and training is available from smartkit@msn.com.
+Commercial support and training is available , please mailto z@smartkit.club
 
 ##
