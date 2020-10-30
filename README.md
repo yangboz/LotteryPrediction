@@ -38,7 +38,8 @@ here we are not garantee to help with you to  win lottery prize. if you got luck
 ## donate  ETH: 0xd2d89b06cad0120dd4f8f9f59f96154bc7712efa
 
 ## custom company service mailto: z@smartkit.club
-# Refs:
+
+## Refs:
 
 http://deeplearning4j.org/usingrnns.html
 
@@ -80,8 +81,16 @@ http://stats.stackexchange.com/questions/68662/using-deep-learning-for-time-seri
 [Random.org](http://www.random.org/clients/http/)
 
 [Predictive Analytics Guide](http://www.predictiveanalyticsworld.com/predictive_analytics.php)
+ 
+[TensorFlow Tutorial for Time Series Prediction:] (https://github.com/tgjeon/TensorFlow-Tutorials-for-Time-Series)
 
 # Roadmap:
+
+## landing page: 
+
+## PoC 
+
+## API public service:
 
 ## Phase I.Graphics: Looking at Data; 
 
@@ -174,7 +183,7 @@ Phase IV.Applications: Using Data;
 
 4....
 
-#TODO:
+# TODO:
 
 1.Using D3JS Chart to visualization the data; (http://techslides.com/over-1000-d3-js-examples-and-demos/);
 
