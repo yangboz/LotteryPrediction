@@ -22,6 +22,12 @@ With classification, deep learning is able to establish correlations between, sa
 ![Snapshot of "CDF plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/src/snapshots/blue_balls_cdf_plot.png)
 ![Snapshot of "Probability plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/src/snapshots/blue_balls_probability_plot.png)
 
+
+
+streamlit: https://docs.streamlit.io/en/stable/api.html#display-data
+
+plotly:https://plotly.com/python/time-series/
+
 # Live Demos
 
 https://yangboz.github.io/labs/lp/LotteryPrediction_AmCharts_R.swf 
@@ -199,6 +205,8 @@ Phase IV.Applications: Using Data;
 
 7.Implementing a highly scalable prediction; (http://www.slideshare.net/SpringCentral/implementing-a-highly-scalable-stock-prediction-system-with-r-apache-geode-and-spring-xd)
  (https://github.com/Pivotal-Open-Source-Hub/StockInference-Spark)
+ 
+ fbprophet: https://facebook.github.io/prophet/docs/quick_start.html
  
  ## References
  
