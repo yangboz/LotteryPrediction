@@ -22,7 +22,9 @@ With classification, deep learning is able to establish correlations between, sa
 ![Snapshot of "CDF plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/src/snapshots/blue_balls_cdf_plot.png)
 ![Snapshot of "Probability plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/src/snapshots/blue_balls_probability_plot.png)
 
-
+  using fbProphet:
+  
+![fbProphet](https://raw.githubusercontent.com/yangboz/LotteryPrediction/master/dataV/python/fbProphet.jpg)
 
 streamlit: https://docs.streamlit.io/en/stable/api.html#display-data
 
