@@ -17,12 +17,16 @@ from pandas import read_csv
 # load data
 path = './03001-17132.csv'
 
-header_list = ["ds", "rball1"]
+# header_list = ["ds", "rball1"]
 header_list = ["ds", "blue_ball"]
-df = read_csv(path, header=0,sep=',', delimiter=None, names=header_list, usecols = [1,15])
-print(df)
+df = read_csv(path, header=None,sep=',', delimiter=None, names=header_list,usecols = [1,8])
+#smaller test dataset
 
 subdf = df.iloc[0:100]
+
+print(subdf.shape)
+print(df.iloc[0:1])
+
 
 print(subdf.shape)
 print(subdf)
@@ -55,8 +59,8 @@ model.fit(df)
 
 # define the period for which we want a prediction
 future = list()
-for i in range(1, 13):
-	date = '2003/%02d' % i
+for i in range(1, 10):
+	date = '2017/%02d' % i
 	future.append([date])
 future = DataFrame(future)
 future.columns = ['ds']
