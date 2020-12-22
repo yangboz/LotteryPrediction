@@ -1,1 +1,12 @@
-@see: https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/
+Autoregression (AR)
+Moving Average (MA)
+Autoregressive Moving Average (ARMA)
+Autoregressive Integrated Moving Average (ARIMA)
+Seasonal Autoregressive Integrated Moving-Average (SARIMA)
+Seasonal Autoregressive Integrated Moving-Average with Exogenous Regressors (SARIMAX)
+Vector Autoregression (VAR)
+Vector Autoregression Moving-Average (VARMA)
+Vector Autoregression Moving-Average with Exogenous Regressors (VARMAX)
+Simple Exponential Smoothing (SES)
+Holt Winter’s Exponential Smoothing (HWES)
+@more: https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/
