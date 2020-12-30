@@ -20,3 +20,5 @@
 11.Holt Winter’s Exponential Smoothing (HWES)
 
 @more: https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/
+
+https://facebook.github.io/prophet/docs/quick_start.html
