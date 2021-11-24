@@ -50,7 +50,7 @@ here we are not garantee to help with you to  win lottery prize. if you got luck
 
 ## donate  ETH: 0xa45542927c06591a224c28ca3596a3bD56C499fb
 
-## custom company service mailto: z@smartkit.club
+## custom company service mailto: z@smartkit.club, with your sample history lottery-data, and must have plain text of rule introduce.
 
 ## Refs:
 
