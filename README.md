@@ -18,12 +18,7 @@ With classification, deep learning is able to establish correlations between, sa
 ![Screenshot of "LotteryPrediction"](https://raw.githubusercontent.com/yangboz/LotteryPrediction/master/dataV/Flex/src/assets/screenshots/lp_time_slice.jpg)
 ![Screenshot of "LotteryPrediction"](https://raw.githubusercontent.com/yangboz/LotteryPrediction/master/dataV/Flex/src/assets/screenshots/lp_time_slice_compare.jpg)
 
-## Predictions
-![Snapshot of "Dot plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/src/snapshots/blue_balls_dot_plot.png)
-![Snapshot of "Histogram plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/src/snapshots/blue_balls_histogram_plot.png)
-![Snapshot of "KDE plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/src/snapshots/blue_balls_gussian_kde_plot.png)
-![Snapshot of "CDF plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/src/snapshots/blue_balls_cdf_plot.png)
-![Snapshot of "Probability plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/src/snapshots/blue_balls_probability_plot.png)
+## data visualization
 
   ## using fbProphet:
   
