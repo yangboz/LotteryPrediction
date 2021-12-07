@@ -43,7 +43,7 @@ besides of following  "law of proability","Probability: Independent Events", the
 
 here we are not garantee to help with you to  win lottery prize. if you got lucky from here. please donate here, we also donate to charities.
 
-## donate  ETH: 0xa45542927c06591a224c28ca3596a3bD56C499fb
+## Please donate to ETH: 0xa45542927c06591a224c28ca3596a3bD56C499fb
 
 ## custom company service mailto: z@smartkit.club, with your sample history lottery-data, and must have plain text of rule introduce.
 
@@ -91,8 +91,6 @@ http://stats.stackexchange.com/questions/68662/using-deep-learning-for-time-seri
 [Predictive Analytics Guide](http://www.predictiveanalyticsworld.com/predictive_analytics.php)
  
 [TensorFlow Tutorial for Time Series Prediction:] (https://github.com/tgjeon/TensorFlow-Tutorials-for-Time-Series)
-
-[Optimizing the model](https://towardsdatascience.com/implementing-facebook-prophet-efficiently-c241305405a3)
 
 # Roadmap:
 
