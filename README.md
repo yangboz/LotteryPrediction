@@ -92,6 +92,8 @@ http://stats.stackexchange.com/questions/68662/using-deep-learning-for-time-seri
  
 [TensorFlow Tutorial for Time Series Prediction:] (https://github.com/tgjeon/TensorFlow-Tutorials-for-Time-Series)
 
+[Optimizing the model](https://towardsdatascience.com/implementing-facebook-prophet-efficiently-c241305405a3)
+
 # Roadmap:
 
 ## landing page: 
