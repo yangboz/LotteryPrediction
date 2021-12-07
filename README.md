@@ -223,8 +223,11 @@ TensorFlow Tutorial for Time Series Prediction: https://github.com/tgjeon/Tensor
 
 https://www.datascience.us/predicting-success-in-lottery-with-deep-learning/
 
+## freeversion support and trail
+https://github.com/yangboz/LotteryPrediction/wiki
+
 ## Commercial support and training
 
-Commercial support and training is available , please mailto z@smartkit.club
+Commercial support and training is available , please mailto z@smartkit.club  with your historic-data and plain english description.
 
 ##
