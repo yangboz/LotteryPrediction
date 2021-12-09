@@ -1,0 +1,26 @@
+
+FROM kaggle/python:latest 
+
+RUN apt-get -y update
+
+RUN apt-get install -y build-essential 
+RUN conda install -y nomkl
+RUN conda install -y pystan
+
+WORKDIR /code
+
+#RUN /usr/local/bin/python -m pip install --upgrade pip
+
+RUN pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+
+COPY ./requirements.txt /code/requirements.txt
+
+
+RUN pip install -r /code/requirements.txt
+
+
+COPY ./app /code/app
+
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
+
