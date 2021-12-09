@@ -18,12 +18,7 @@ With classification, deep learning is able to establish correlations between, sa
 ![Screenshot of "LotteryPrediction"](https://raw.githubusercontent.com/yangboz/LotteryPrediction/master/dataV/Flex/src/assets/screenshots/lp_time_slice.jpg)
 ![Screenshot of "LotteryPrediction"](https://raw.githubusercontent.com/yangboz/LotteryPrediction/master/dataV/Flex/src/assets/screenshots/lp_time_slice_compare.jpg)
 
-## Predictions
-![Snapshot of "Dot plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/src/snapshots/blue_balls_dot_plot.png)
-![Snapshot of "Histogram plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/src/snapshots/blue_balls_histogram_plot.png)
-![Snapshot of "KDE plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/src/snapshots/blue_balls_gussian_kde_plot.png)
-![Snapshot of "CDF plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/src/snapshots/blue_balls_cdf_plot.png)
-![Snapshot of "Probability plotting"](https://raw.github.com/yangboz/LotteryPrediction/master/Python/src/snapshots/blue_balls_probability_plot.png)
+## data visualization
 
   ## using fbProphet:
   
@@ -48,7 +43,7 @@ besides of following  "law of proability","Probability: Independent Events", the
 
 here we are not garantee to help with you to  win lottery prize. if you got lucky from here. please donate here, we also donate to charities.
 
-## donate  ETH: 0xa45542927c06591a224c28ca3596a3bD56C499fb
+## Please donate to ETH: 0xa45542927c06591a224c28ca3596a3bD56C499fb
 
 ## custom company service mailto: z@smartkit.club, with your sample history lottery-data, and must have plain text of rule introduce.
 
@@ -197,23 +192,7 @@ Phase IV.Applications: Using Data;
 4....
 
 # TODO:
-
-1.Using D3JS Chart to visualization the data; (http://techslides.com/over-1000-d3-js-examples-and-demos/);
-
-2.Using Tableau software trail and error; (http://www.tableausoftware.com/)
-
-3.Using PredictionIO API; (http://prediction.io)
-
-4.Using Free Tempo-DB for time series database storage ; (https://tempo-db.com/docs/batch-import/python-script/)
-
-5.Using BigML API; (https://bigml.com/)
-
-6.Pandas+scikit+matplotlib+IPython Notebook; (http://nbviewer.ipython.org/url/www.onewinner.me/en/devoxxML.ipynb)
-
-7.Implementing a highly scalable prediction; (http://www.slideshare.net/SpringCentral/implementing-a-highly-scalable-stock-prediction-system-with-r-apache-geode-and-spring-xd)
- (https://github.com/Pivotal-Open-Source-Hub/StockInference-Spark)
- 
- fbprophet: https://facebook.github.io/prophet/docs/quick_start.html
+ fbprophet model finetune: https://facebook.github.io/prophet/docs/quick_start.html
  
  ## References
  
@@ -223,8 +202,12 @@ TensorFlow Tutorial for Time Series Prediction: https://github.com/tgjeon/Tensor
 
 https://www.datascience.us/predicting-success-in-lottery-with-deep-learning/
 
+## free version support and trail
+
+https://github.com/yangboz/LotteryPrediction/wiki
+
 ## Commercial support and training
 
-Commercial support and training is available , please mailto z@smartkit.club
+Commercial support and training is available , please mailto z@smartkit.club  with your historic-data and plain english description.
 
 ##
