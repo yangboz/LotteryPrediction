@@ -45,6 +45,8 @@ here we are not garantee to help with you to  win lottery prize. if you got luck
 
 ## Please donate to ETH: 0xa45542927c06591a224c28ca3596a3bD56C499fb
 
+[howto install and use it?]https://github.com/yangboz/LotteryPrediction/wiki#how-can-i-install-and-use-it
+
 ## custom company service mailto: z@smartkit.club, with your sample history lottery-data, and must have plain text of rule introduce.
 
 ## Refs:
