@@ -13,6 +13,8 @@ https://github.com/tgjeon/TensorFlow-Tutorials-for-Time-Series
 
 https://github.com/hzy46/TensorFlow-Time-Series-Examples
 
+https://questdb.io/blog/2022/06/20/forecasting-with-questdb-and-tensorflow/
+
 # Screen shots
 2003 red_blue_balls trend:
 
