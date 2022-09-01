@@ -23,6 +23,7 @@ With classification, deep learning is able to establish correlations between, sa
   ## using fbProphet:
   
 ![fbProphet](https://raw.githubusercontent.com/yangboz/LotteryPrediction/master/dataV/python/fbProphet.jpg)
+![darts](https://raw.githubusercontent.com/yangboz/LotteryPrediction/master/dataV/python/darts.jpg)
 
   ## todos:
   
@@ -194,6 +195,7 @@ Phase IV.Applications: Using Data;
 4....
 
 # TODO:
+
  fbprophet model finetune: https://facebook.github.io/prophet/docs/quick_start.html
  
  ## References
