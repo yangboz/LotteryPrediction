@@ -6,6 +6,11 @@ Predicting is making claims about something that will happen, often based on inf
 Everyone solves the problem of prediction every day with various degrees of success. For example weather, harvest, energy consumption, movements of forex (foreign exchange) currency pairs or of shares of stocks, earthquakes, and a lot of other stuff needs to be predicted.
 ...
 
+now I am taking course to Wharton's Business Analytics: From Data to Insights program! 
+
+# descriptive Analytics
+
+
 # Predictive Analytics
 
 With classification, deep learning is able to establish correlations between, say, pixels in an image and the name of a person. You might call this a static prediction. By the same token, exposed to enough of the right data, deep learning is able to establish correlations between present events and future events. The future event is like the label in a sense. Deep learning doesn’t necessarily care about time, or the fact that something hasn’t happened yet. Given a time series, deep learning may read a string of number and predict the number most likely to occur next.
