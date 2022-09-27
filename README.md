@@ -8,6 +8,30 @@ Everyone solves the problem of prediction every day with various degrees of succ
 
 now I am taking course to Wharton's Business Analytics: From Data to Insights program! 
 
+
+Week 2: Module Introduction and Instructions
+By the end of Week 2 - Descriptive Analytics: Describing and Forecasting Future Events, you should be able to:
+
+Use historical data to estimate forecasts for future events using trends and seasonality
+Calculate the descriptive sample statistics for demand distributions
+Discuss drawbacks of using Moving Averages Forecasting
+Key Activities for Week 2
+Videos 1-29
+Practice Quiz 1: Newsvendor Concepts
+Practice Quiz 2: Moving Averages
+Practice Quiz 3: Trends and Seasonality
+Week 2: Knowledge Check
+Assignment 2: iD Fresh Food Case Study
+All of the above activities should be completed by Thursday, July 14, 2022, by 4:29 PM UTC.
+
+Spreadsheet Models
+
+In this week, Professor Veeraraghavan uses Excel spreadsheets to demonstrate some of the forecasting models. The spreadsheets that he uses are added in the respective video pages.
+
+You can also find all the spreadsheets collated in the Week 2: Spreadsheets page along with their solution files. For the best learning experience, we recommend that you work on the spreadsheet models along with the professor before you download the solution files.
+
+
+
 # descriptive Analytics
 
 
