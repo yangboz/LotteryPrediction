@@ -235,6 +235,13 @@ Time Series Forecasting made easy with Darts
 
 https://unit8co.github.io/darts/#:~:text=darts%20is%20a%20Python%20library,%2C%20similar%20to%20scikit%2Dlearn.
 
+
+
+ETSformer: Exponential Smoothing Transformers for Time-Series Forecasting 
+
+https://blog.salesforceairesearch.com/etsformer-time-series-forecasting/
+
+
 ## papers
 
 https://www.datascience.us/predicting-success-in-lottery-with-deep-learning/
