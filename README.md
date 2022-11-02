@@ -73,7 +73,7 @@ besides of following  "law of proability","Probability: Independent Events", the
 
 here we are not garantee to help with you to  win lottery prize. if you got lucky from here. please donate here, we also donate to charities.
 
-## Please donate to ETH: 0xa45542927c06591a224c28ca3596a3bD56C499fb
+## Please donate to ETH: 0xa45542927c06591a224c28ca3596a3bD56C499fb or bitcoin://13dCHc2EjAig5dejcmxYFnWLwJ5AmJb6q8?amount=0
 
 [howto install and use it?]https://github.com/yangboz/LotteryPrediction/wiki#how-can-i-install-and-use-it
 
