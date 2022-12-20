@@ -227,6 +227,9 @@ Phase IV.Applications: Using Data;
 
  fbprophet model finetune: https://facebook.github.io/prophet/docs/quick_start.html
  
+ 
+ ## ChatGPT 
+ 
  according to  ChatGPT's advice:
  
  Writing a lottery prediction program can be a challenging task as it involves analyzing past lottery results, identifying patterns, and using statistical techniques to make predictions about future draws.
