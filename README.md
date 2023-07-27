@@ -22,15 +22,14 @@ Practice Quiz 2: Moving Averages
 Practice Quiz 3: Trends and Seasonality
 Week 2: Knowledge Check
 Assignment 2: iD Fresh Food Case Study
-All of the above activities should be completed by Thursday, July 14, 2022, by 4:29 PM UTC.
 
 Spreadsheet Models
 
-In this week, Professor Veeraraghavan uses Excel spreadsheets to demonstrate some of the forecasting models. The spreadsheets that he uses are added in the respective video pages.
+In this week, Professor Veeraraghavan uses Excel spreadsheets to demonstrate some of the forecasting models.
+The spreadsheets that he uses are added in the respective video pages.
 
-You can also find all the spreadsheets collated in the Week 2: Spreadsheets page along with their solution files. For the best learning experience, we recommend that you work on the spreadsheet models along with the professor before you download the solution files.
-
-
+You can also find all the spreadsheets collated in the Week 2: Spreadsheets page along with their solution files. 
+For the best learning experience, we recommend that you work on the spreadsheet models along with the professor before you download the solution files.
 
 # descriptive Analytics
 
@@ -57,8 +56,6 @@ Dense Layer: A dense layer can be added after the dropout layer to reduce the di
 Loss Function: The model would be trained using a suitable loss function, such as mean squared error or cross-entropy loss, to measure the difference between the predicted winning numbers and the actual winning numbers.
 Optimization Algorithm: An optimization algorithm, such as stochastic gradient descent, would be used to update the weights of the model during training.
 Overall, this RNN architecture can learn patterns in the lottery data over time and generate predictions for the next winning numbers based on those patterns.
-
-
 
 
 ### Collect and preprocess the data: 
