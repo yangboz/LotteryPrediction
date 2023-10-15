@@ -369,6 +369,6 @@ https://github.com/yangboz/LotteryPrediction/wiki
 
 ## Commercial support and training
 
-Commercial support and training is available , please mailto z@smartkit.club  with your historic-data and plain english description.
+Commercial support and training is available , please mailto z@smartkit.club  with your historic-data and plain english description and budget plan.
 
 ##
