@@ -146,6 +146,9 @@ here we are not garantee to help with you to  win lottery prize. if you got luck
 
 [howto install and use it?]https://github.com/yangboz/LotteryPrediction/wiki#how-can-i-install-and-use-it
 
+
+
+first of first, we can not grantee 100% of prediction accuracy to your get rich dream.
 ## custom company service mailto: z@smartkit.club, with your sample history lottery-data, and must have plain text of game-rule's introduction.
 
 ## Refs:
