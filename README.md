@@ -373,6 +373,7 @@ https://github.com/yangboz/LotteryPrediction/wiki
 ## Commercial support and training
 
 Commercial support and training is available , please mailto zheng532@126.com or WeChat ID zhenglw532
-  with your historic-data and plain english description and budget plan .
+  with your historic-data and plain english description and budget plan 10$~50$ PER CASE .
+
 
 ##
