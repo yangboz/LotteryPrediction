@@ -25,16 +25,16 @@ Assignment 2: iD Fresh Food Case Study
 
 **Cotler Pricing Sheet**
 
-*Effective Date: [Date]*
+*Effective Date: 1204/2023
 
 | **Package**                     | **Features**                                                      | **Pricing**                    |
 |----------------------------------|--------------------------------------------------------------------|--------------------------------|
 | **Open Source**                  | - Basic prediction functionality                                   | **Free**                        |
-|                                  | - Community support                                               |                                |
+|                                  | - Community support                                                |                                |
 |                                  | - Limited customization                                           |                                |
 |----------------------------------|--------------------------------------------------------------------|--------------------------------|
 | **Low-Cost, Low-Accuracy**       | - Enhanced prediction capabilities                                 | **$9.99/month**                 |
-|                                  | - Email support                                                   |                                |
+|                                  | - Email support  mailto zheng532@126.com or WeChat ID zhenglw532                                                 |                                |
 |                                  | - Limited precision                                               |                                |
 |                                  | - Suitable for small-scale projects                                |                                |
 |----------------------------------|--------------------------------------------------------------------|--------------------------------|
@@ -44,7 +44,7 @@ Assignment 2: iD Fresh Food Case Study
 |                                  | - Suitable for medium to large-scale projects                      |                                |
 |----------------------------------|--------------------------------------------------------------------|--------------------------------|
 | **Enterprise Custom Solutions**   | - Tailored solutions for specific business needs                   | **Contact Us for a Quote**      |
-|                                  | - Dedicated account manager and premium support                    |                                |
+|                                  | - Dedicated account manager and premium support                    | mailto zheng532@126.com                          |
 |                                  | - Advanced machine learning models                                 |                                |
 |                                  | - Scalable infrastructure for high-demand applications            |                                |
 
@@ -53,27 +53,7 @@ Assignment 2: iD Fresh Food Case Study
 - Custom enterprise solutions are available upon request; please contact our sales team for detailed discussions.
 - Prices are subject to change; please refer to our website or contact our sales team for the most up-to-date information.
 
-For inquiries or to subscribe to a plan, please contact our sales team at [sales@cotler.ai](mailto:sales@cotler.ai) or visit our website at [www.cotler.ai](http://www.cotler.ai).
-
-
-
-# Predictive Analytics
-
-With classification, deep learning is able to establish correlations between, say, pixels in an image and the name of a person. You might call this a static prediction. By the same token, exposed to enough of the right data, deep learning is able to establish correlations between present events and future events. The future event is like the label in a sense. Deep learning doesn’t necessarily care about time, or the fact that something hasn’t happened yet. Given a time series, deep learning may read a string of number and predict the number most likely to occur next.
-
-
-# by chatgpt
-
-
-write down an AI transformer  architecture model to perform time-serials lottery data analytics program
-Here is one potential approach to writing an AI transformer architecture model for performing time-series lottery data analytics:
-
-## Collect and preprocess the data: 
-
-Gather a large dataset of past lottery results, including the numbers drawn and the date of the draw. Preprocess the data to remove any errors or inconsistencies, and format it for use in the model.
-Split the data into training and testing sets: Use a portion of the data for training the model, and reserve the rest for testing the model's performance.
-Implement the transformer architecture: Use the transformer architecture, which is a type of deep learning model designed for natural language processing tasks, to analyze the time-series data. The transformer architecture consists of multiple layers of self-attention and fully connected neural network layers.
-
+For inquiries or to subscribe to a plan, please contact our sales team zheng532@126.com.
 
 ## Train the model: 
 
