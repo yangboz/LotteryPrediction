@@ -6,7 +6,7 @@ Predicting is making claims about something that will happen, often based on inf
 Everyone solves the problem of prediction every day with various degrees of success. For example weather, harvest, energy consumption, movements of forex (foreign exchange) currency pairs or of shares of stocks, earthquakes, and a lot of other stuff needs to be predicted.
 ...
 
-now I am taking course to Wharton's Business Analytics: From Data to Insights program! 
+now I am taking the course of Wharton's Business Analytics: From Data to Insights program! 
 
 
 Week 2: Module Introduction and Instructions
@@ -34,7 +34,7 @@ Assignment 2: iD Fresh Food Case Study
 |                                  | - Limited customization                                           |                                |
 |----------------------------------|--------------------------------------------------------------------|--------------------------------|
 | **Low-Cost, Low-Accuracy**       | - Enhanced prediction capabilities                                 | **$9.99/month**                 |
-|                                  | - Email support  mailto zheng532@126.com or WeChat ID zhenglw532
+|                                  | - Email support   zheng532@126.com or WeChat ID zhenglw532
 |                                  | - Limited precision                                                |
 |                                  | - Suitable for small-scale projects                                |                                |
 |----------------------------------|--------------------------------------------------------------------|--------------------------------|
