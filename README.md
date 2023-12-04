@@ -35,16 +35,16 @@ Assignment 2: iD Fresh Food Case Study
 |----------------------------------|--------------------------------------------------------------------|--------------------------------|
 | **Low-Cost, Low-Accuracy**       | - Enhanced prediction capabilities                                 | **$9.99/month**                 |
 |                                  | - Email support  mailto zheng532@126.com or WeChat ID zhenglw532
-|                                  | - Limited precision                                               |                                |
+|                                  | - Limited precision                                               |                                  |
 |                                  | - Suitable for small-scale projects                                |                                |
 |----------------------------------|--------------------------------------------------------------------|--------------------------------|
-| **Mid-High Cost, SOTA Accuracy**  | - State-of-the-art prediction accuracy                             | **$49.99/month**                |
+| **Mid-High Cost, SOTA Accuracy**  | - State-of-the-art prediction accuracy                             | **$49.99/month**              |
 |                                  | - Priority email and chat support                                  |                                |
 |                                  | - High precision and customization options                         |                                |
 |                                  | - Suitable for medium to large-scale projects                      |                                |
 |----------------------------------|--------------------------------------------------------------------|--------------------------------|
-| **Enterprise Custom Solutions**   | - Tailored solutions for specific business needs                   | **Contact Us for a Quote**      |
-|                                  | - Dedicated account manager and premium support                    | mailto zheng532@126.com                          |
+| **Enterprise Custom Solutions**   | - Tailored solutions for specific business needs                   | **Contact Us for a Quote**    |
+|                                  | - Dedicated account manager and premium support                    | mailto zheng532@126.com        |
 |                                  | - Advanced machine learning models                                 |                                |
 |                                  | - Scalable infrastructure for high-demand applications            |                                |
 
