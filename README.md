@@ -35,7 +35,7 @@ Assignment 2: iD Fresh Food Case Study
 |----------------------------------|--------------------------------------------------------------------|--------------------------------|
 | **Low-Cost, Low-Accuracy**       | - Enhanced prediction capabilities                                 | **$9.99/month**                 |
 |                                  | - Email support  mailto zheng532@126.com or WeChat ID zhenglw532
-|                                  | - Limited precision                                               |                                  |
+|                                  | - Limited precision                                                |
 |                                  | - Suitable for small-scale projects                                |                                |
 |----------------------------------|--------------------------------------------------------------------|--------------------------------|
 | **Mid-High Cost, SOTA Accuracy**  | - State-of-the-art prediction accuracy                             | **$49.99/month**              |
