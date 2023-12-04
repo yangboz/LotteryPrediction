@@ -23,64 +23,37 @@ Practice Quiz 3: Trends and Seasonality
 Week 2: Knowledge Check
 Assignment 2: iD Fresh Food Case Study
 
-Spreadsheet Models
+**Cotler Pricing Sheet**
 
-In this week, Professor Veeraraghavan uses Excel spreadsheets to demonstrate some of the forecasting models.
-The spreadsheets that he uses are added in the respective video pages.
+*Effective Date: [Date]*
 
-You can also find all the spreadsheets collated in the Week 2: Spreadsheets page along with their solution files. 
-For the best learning experience, we recommend that you work on the spreadsheet models along with the professor before you download the solution files.
+| **Package**                     | **Features**                                                      | **Pricing**                    |
+|----------------------------------|--------------------------------------------------------------------|--------------------------------|
+| **Open Source**                  | - Basic prediction functionality                                   | **Free**                        |
+|                                  | - Community support                                               |                                |
+|                                  | - Limited customization                                           |                                |
+|----------------------------------|--------------------------------------------------------------------|--------------------------------|
+| **Low-Cost, Low-Accuracy**       | - Enhanced prediction capabilities                                 | **$9.99/month**                 |
+|                                  | - Email support                                                   |                                |
+|                                  | - Limited precision                                               |                                |
+|                                  | - Suitable for small-scale projects                                |                                |
+|----------------------------------|--------------------------------------------------------------------|--------------------------------|
+| **Mid-High Cost, SOTA Accuracy**  | - State-of-the-art prediction accuracy                             | **$49.99/month**                |
+|                                  | - Priority email and chat support                                  |                                |
+|                                  | - High precision and customization options                         |                                |
+|                                  | - Suitable for medium to large-scale projects                      |                                |
+|----------------------------------|--------------------------------------------------------------------|--------------------------------|
+| **Enterprise Custom Solutions**   | - Tailored solutions for specific business needs                   | **Contact Us for a Quote**      |
+|                                  | - Dedicated account manager and premium support                    |                                |
+|                                  | - Advanced machine learning models                                 |                                |
+|                                  | - Scalable infrastructure for high-demand applications            |                                |
 
-# descriptive Analytics
+**Notes:**
+- All prices are listed on a per-month basis.
+- Custom enterprise solutions are available upon request; please contact our sales team for detailed discussions.
+- Prices are subject to change; please refer to our website or contact our sales team for the most up-to-date information.
 
-## by chatgpt
-
-write down an AI transformer  architecture model to perform time-serials lottery data analytics program
-Here is one potential approach to writing an AI transformer architecture model for performing time-series lottery data analytics:
-
-One possible architecture for an AI model to perform time-series lottery data analytics could be a recurrent neural network (RNN) model. Here's a high-level overview of the architecture:
-
-
-### Data Preprocessing: 
-
-The lottery data would need to be preprocessed before feeding into the model. This includes steps such as converting the data into a suitable format (e.g. numerical), handling missing values, and scaling the data to a uniform range.
-
-### Input Layer: 
-
-The input layer of the RNN would take in the preprocessed lottery data as a time-series sequence. Each data point in the sequence represents the lottery winning numbers for a particular drawing.
-
-
-### Recurrent Layers: 
-
-The RNN would have multiple recurrent layers, with each layer processing one time step of the input sequence. The output of each recurrent layer is fed back into the next recurrent layer. This allows the model to learn long-term dependencies in the data.
-
-
-#### Dropout Layer: 
-
-To prevent overfitting, a dropout layer can be added after the recurrent layers. This randomly drops out some of the neurons during training, forcing the remaining neurons to learn more robust features.
-Dense Layer: A dense layer can be added after the dropout layer to reduce the dimensionality of the output and generate a final prediction for the next winning lottery numbers.
-
-#### Output Layer: 
-
-The output layer would take the output of the dense layer and generate a set of predicted winning numbers for the next drawing.
-Loss Function: The model would be trained using a suitable loss function, such as mean squared error or cross-entropy loss, to measure the difference between the predicted winning numbers and the actual winning numbers.
-Optimization Algorithm: An optimization algorithm, such as stochastic gradient descent, would be used to update the weights of the model during training.
-Overall, this RNN architecture can learn patterns in the lottery data over time and generate predictions for the next winning numbers based on those patterns.
-
-
-### Collect and preprocess the data: 
-
-Gather a large dataset of past lottery results, including the numbers drawn and the date of the draw. Preprocess the data to remove any errors or inconsistencies, and format it for use in the model.
-Split the data into training and testing sets: Use a portion of the data for training the model, and reserve the rest for testing the model's performance.
-Implement the transformer architecture: Use the transformer architecture, which is a type of deep learning model designed for natural language processing tasks, to analyze the time-series data. The transformer architecture consists of multiple layers of self-attention and fully connected neural network layers.
-
-Train the model: Use the training data to train the model, adjusting the model's parameters as needed to improve its accuracy.
-
-Test the model: Use the testing data to evaluate the model's performance and fine-tune it as needed.
-
-Deploy the model: Deploy the trained model in a production environment, where it can be used to analyze real-time lottery data and make predictions about future draws.
-
-This is just one possible approach to building an AI transformer architecture model for time-series lottery data analytics. There may be other approaches that could also be effective, depending on the specific requirements and constraints of the project.
+For inquiries or to subscribe to a plan, please contact our sales team at [sales@cotler.ai](mailto:sales@cotler.ai) or visit our website at [www.cotler.ai](http://www.cotler.ai).
 
 
 
