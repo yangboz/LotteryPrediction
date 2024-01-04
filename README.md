@@ -70,7 +70,7 @@ This is just one possible approach to building an AI transformer architecture mo
 
 There may be other approaches that could also be effective, depending on the specific requirements and constraints of the project.
 
-## dataVs:
+## data Visualize examples:
 
 ### using Flash
 
