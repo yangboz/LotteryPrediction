@@ -29,8 +29,8 @@ Assignment 2: iD Fresh Food Case Study
 
 | **Package**                     | **Features**                                                      | **Pricing**                    |
 |----------------------------------|--------------------------------------------------------------------|--------------------------------|
-| **Open Source**                  | - Basic prediction functionality                                   | **Free**                       |
-|                                  | - Community support   [GPTs:https://chat.openai.com/gpts/editor/g-OtkLCltUZ]                        |
+| **Open Source**                  | - Basic analytics functionality                                   | **Free**                       |
+|                                  | - GPTs free trail:   [GPTs:https://chat.openai.com/gpts/editor/g-OtkLCltUZ]                        |
 |                                  | - Limited customization                                           |                                 |
 |----------------------------------|--------------------------------------------------------------------|--------------------------------|
 | **Low-Cost, Low-Accuracy**       | - Enhanced prediction capabilities                                 | **$9.99/month**                |
