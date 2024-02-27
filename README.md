@@ -59,7 +59,7 @@ For inquiries or to subscribe to a plan, please contact our sales team zheng532@
 
 Use the training data to train the model, adjusting the model's parameters as needed to improve its accuracy.
 
-## Test the model: 
+## the model predict: 
 
 Use the testing data to evaluate the model's performance and fine-tune it as needed.
 Deploy the model: Deploy the trained model in a production environment, where it can be used to analyze real-time lottery data and make predictions about future draws.
