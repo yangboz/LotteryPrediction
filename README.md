@@ -342,3 +342,11 @@ Commercial support and training is available , please mailto zheng532@126.com or
 
 
 ##
+
+##  verify WIP
+
+Transformer way: https://github.com/yangboz/Informer2020?tab=readme-ov-file
+
+LLM way:  https://github.com/KimMeen/Time-LLM/tree/main/scripts
+
+
